@@ -21,7 +21,7 @@ def detect_language(path: str) -> Language:
     filename = os.path.splitext(os.path.basename(path))[0]
     return 'common' if filename == 'common' else LANGUAGES[int(filename)]
 
-def load_words(glob_pattern: str = './romfs/*') -> dict[str, set[Entry]]:
+def load_words(glob_pattern: str = './romfs/NgWord/*') -> dict[str, set[Entry]]:
     """Loads all bad word lists in folders that match the specified glob pattern."""
     words: dict[str, set[Entry]] = dict()
     for folder in glob.glob(glob_pattern):
