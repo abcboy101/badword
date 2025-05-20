@@ -3,6 +3,8 @@
 |-
 | <nowiki>.*0ンチ.*</nowiki> || jja || 33–63 || ||
 |-
+| <nowiki>.*14eightyeight.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*14word.*</nowiki> || common || 51–63 || ||
 |-
 | <nowiki>.*18넘.*</nowiki> || kko || 21–63 || ||
@@ -17,15 +19,23 @@
 |-
 | <nowiki>.*18쉐리.*</nowiki> || kko || 21–63 || ||
 |-
+| <nowiki>.*1stpanzerdivision.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*1タタ2タチ3タツaタテbタトc.*</nowiki> || jja || 45–63 || ||
 |-
 | <nowiki>.*2gender.*</nowiki> || common || 51–63 || ||
+|-
+| <nowiki>.*3some.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*3sum.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*4n4l.*</nowiki> || common || 40–63 || ||
 |-
 | <nowiki>.*4nal.*</nowiki> || common || 40–63 || ||
 |-
 | <nowiki>.*4ne.*</nowiki> || jja || 44–63 || ||
+|-
+| <nowiki>.*4threich.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*4ネ.*</nowiki> || jja || 30–63 || ||
 |-
@@ -54,6 +64,8 @@
 | <nowiki>.*6mwe.*</nowiki> || common || 51–63 || ||
 |-
 | <nowiki>.*6mwne.*</nowiki> || common || 51–63 || ||
+|-
+| <nowiki>.*88heil.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*8==.*</nowiki> || common || 42–63 || ||
 |-
@@ -94,6 +106,8 @@
 | <nowiki>.*acab.*</nowiki> || een, pen, pde, pit, pnl, pru || 31–63 || ||
 |-
 | <nowiki>.*adamlanza.*</nowiki> || common || 45–63 || ||
+|-
+| <nowiki>.*ado1f.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*adolf$</nowiki> || common || 33–63 || ||
 |-
@@ -141,6 +155,10 @@
 |-
 | <nowiki>.*analintruder.*</nowiki> || tzh, common || 19–23, 33–63 || pen, tzh, ten || 4–18
 |-
+| <nowiki>.*analsec.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*analsex.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*analslut.*</nowiki> || common || 37–63 || ||
 |-
 | <nowiki>.*anamia.*</nowiki> || pen || 45–63 || ||
@@ -177,15 +195,25 @@
 |-
 | <nowiki>.*artyomkazantsev.*</nowiki> || common || 45–63 || ||
 |-
-| <nowiki>.*aryannation.*</nowiki> || common || 45–63 || ||
-|-
 | <nowiki>.*as\$.*</nowiki> || een, efr, ees, pen, pit, pes, pnl, ppt, pru, ept, common || 40–63 || ||
 |-
 | <nowiki>.*asphyxiophilia.*</nowiki> || common || 33–63 || ||
 |-
+| <nowiki>.*assbandit.*</nowiki> || common || 63 || een || 13–14
+|-
+| <nowiki>.*assclown.*</nowiki> || common || 63 || een || 13–14
+|-
 | <nowiki>.*asshoie.*</nowiki> || een || 28–63 || ||
 |-
 | <nowiki>.*asshole.*</nowiki> || een, common || 23–63 || jja, een, pen || 16–18
+|-
+| <nowiki>.*asslove.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*asssec.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*asssex.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*asstit.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*asswipe.*</nowiki> || common || 33–63 || een || 13–14
 |-
@@ -257,6 +285,8 @@
 |-
 | <nowiki>.*bawbag.*</nowiki> || common || 33–63 || ||
 |-
+| <nowiki>.*bdsm.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*beastiality.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*bedave.*</nowiki> || pfr || 46–63 || ||
@@ -303,7 +333,23 @@
 |-
 | <nowiki>.*bitch.*</nowiki> || czh, tzh, common || 19–23, 45–63 || pen, czh, ept, tzh, ten || 4–18
 |-
+| <nowiki>.*blod&honor.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*blod&honour.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*blodandhonor.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*blodandhonour.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*blood&honor.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*blood&honour.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*blood&soil.*</nowiki> || common || 51–63 || ||
+|-
+| <nowiki>.*bloodandhonor.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*bloodandhonour.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*bloodandsoil.*</nowiki> || common || 51–63 || ||
 |-
@@ -347,9 +393,13 @@
 |-
 | <nowiki>.*bong.*</nowiki> || een || 45–63 || ||
 |-
+| <nowiki>.*boob$</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*boobies.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*boobjob.*</nowiki> || common || 33–63 || ||
+|-
+| <nowiki>.*boobs$</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*boong.*</nowiki> || pen || 45–63 || ||
 |-
@@ -364,6 +414,8 @@
 | <nowiki>.*bouillave.*</nowiki> || pfr || 45–63 || ||
 |-
 | <nowiki>.*bouyave.*</nowiki> || pfr || 45–63 || ||
+|-
+| <nowiki>.*boydyke.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*boлbah.*</nowiki> || pru || 62–63 || ||
 |-
@@ -425,11 +477,21 @@
 |-
 | <nowiki>.*burne.*</nowiki> || pfr || 45–63 || pfr || 4–14
 |-
+| <nowiki>.*burnjew.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*burrhe.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*buscona.*</nowiki> || pes || 45–63 || ees, pes, ept || 4–14
+|-
+| <nowiki>.*buttmunch.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*buttnugget.*</nowiki> || kko, czh, tzh || 19–63 || jja, pen, pfr, pde, pit, pes, pnl, kko, czh, tzh, ten || 4–18
 |-
 | <nowiki>.*buttplug.*</nowiki> || common || 33–63 || een || 4–14
+|-
+| <nowiki>.*buttsec.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*buttsex.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*byxлo.*</nowiki> || pru || 62–63 || ||
 |-
@@ -635,6 +697,8 @@
 |-
 | <nowiki>.*cockend.*</nowiki> || common || 45–63 || ||
 |-
+| <nowiki>.*cockface.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*cockgoblin.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*cockmuncher.*</nowiki> || common || 33–63 || ||
@@ -643,7 +707,7 @@
 |-
 | <nowiki>.*cockring.*</nowiki> || pes || 45–63 || ||
 |-
-| <nowiki>.*cocksucker.*</nowiki> || tzh, common || 19–23, 33–63 || pen, tzh, ten || 4–18
+| <nowiki>.*cocksuck.*</nowiki> || een, common || 23–63 || jja, een, pen || 16–18
 |-
 | <nowiki>.*coglion.*</nowiki> || pit || 46–63 || pit || 4–14
 |-
@@ -693,11 +757,15 @@
 |-
 | <nowiki>.*conchatumadre.*</nowiki> || ees || 45–63 || ||
 |-
+| <nowiki>.*condom.*</nowiki> || common || 63 || een || 4–14
+|-
 | <nowiki>.*coninhas$</nowiki> || ppt || 59–63 || ||
 |-
 | <nowiki>.*connard.*</nowiki> || pfr || 45–63 || pfr || 4–14
 |-
 | <nowiki>.*connasse.*</nowiki> || pfr || 45–63 || pfr || 4–14
+|-
+| <nowiki>.*cooch.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*coprof.*</nowiki> || pit || 46–63 || ||
 |-
@@ -753,6 +821,8 @@
 |-
 | <nowiki>.*crosseur.*</nowiki> || efr || 23–63 || ||
 |-
+| <nowiki>.*crotch.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*crouia.*</nowiki> || pfr || 59–63 || ||
 |-
 | <nowiki>.*crouill.*</nowiki> || pfr || 45–63 || ||
@@ -777,6 +847,14 @@
 |-
 | <nowiki>.*culoabierto.*</nowiki> || pes || 45–63 || ees, pes || 4–14
 |-
+| <nowiki>.*cumbucket.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*cumdumpster.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*cumface.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*cumrag.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*cumshot.*</nowiki> || tzh, common || 19–23, 33–63 || pen, tzh, ten || 4–18
 |-
 | <nowiki>.*cumstain.*</nowiki> || common || 33–63 || ||
@@ -788,6 +866,8 @@
 | <nowiki>.*cunnilingus.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*cunt.*</nowiki> || een, tzh, common || 19–63 || jja, een, pen, tzh, ten || 4–18
+|-
+| <nowiki>.*cyberseck.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*cybersex.*</nowiki> || common || 45–63 || ||
 |-
@@ -801,7 +881,13 @@
 |-
 | <nowiki>.*damn.*</nowiki> || pen || 45–63 || ||
 |-
+| <nowiki>.*danskfront.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*darkey$</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*darkie.*</nowiki> || common || 45–63 || ||
+|-
+| <nowiki>.*darky$</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*darmtoerist.*</nowiki> || pnl || 45–63 || ||
 |-
@@ -951,9 +1037,13 @@
 |-
 | <nowiki>.*douchefag.*</nowiki> || common || 33–63 || ||
 |-
+| <nowiki>.*downie.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*droogkloot.*</nowiki> || pnl || 45–63 || ||
 |-
 | <nowiki>.*ducon.*</nowiki> || pfr || 45–63 || pfr || 4–14
+|-
+| <nowiki>.*dumbass.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*dunecoon.*</nowiki> || common || 33–63 || ||
 |-
@@ -1023,6 +1113,10 @@
 |-
 | <nowiki>.*erection.*</nowiki> || pfr || 46–63 || ||
 |-
+| <nowiki>.*erotic.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*erotik.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*escrota.*</nowiki> || ept || 32–63 || ||
 |-
 | <nowiki>.*escroto.*</nowiki> || ept || 32–63 || ||
@@ -1043,6 +1137,10 @@
 |-
 | <nowiki>.*etterbak.*</nowiki> || pnl || 45–63 || ||
 |-
+| <nowiki>.*executejew.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*exterminatejew.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*eyaculador.*</nowiki> || pes || 45–63 || ||
 |-
 | <nowiki>.*ezweb\.ne\.jp.*</nowiki> || jja || 19–63 || jja || 16–18
@@ -1050,6 +1148,8 @@
 | <nowiki>.*eлдa.*</nowiki> || pru || 62–63 || ||
 |-
 | <nowiki>.*facciadaculo.*</nowiki> || pit || 45–63 || ||
+|-
+| <nowiki>.*facesit.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*fachiste.*</nowiki> || pfr || 59–63 || ||
 |-
@@ -1071,6 +1171,8 @@
 |-
 | <nowiki>.*fascist.*</nowiki> || tzh, common || 19–23, 33–63 || een, pen, ept, tzh, ten || 4–18
 |-
+| <nowiki>.*fatass.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*fcuk.*</nowiki> || common || 45–63 || een || 4–14
 |-
 | <nowiki>.*felatio.*</nowiki> || common || 33–63 || ||
@@ -1088,6 +1190,8 @@
 | <nowiki>.*femoid.*</nowiki> || een, efr, ees, pen, pde, pit, pes, pnl, ppt, pru, ept || 51–63 || ||
 |-
 | <nowiki>.*fenian$</nowiki> || common || 45–63 || ||
+|-
+| <nowiki>.*fetish.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*feuj.*</nowiki> || pfr || 45–63 || ||
 |-
@@ -1181,7 +1285,11 @@
 |-
 | <nowiki>.*fourre.*</nowiki> || efr || 23–63 || efr || 16–18
 |-
+| <nowiki>.*fourteen88.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*fourteenword.*</nowiki> || common || 51–63 || ||
+|-
+| <nowiki>.*fourthreich.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*francescovilli.*</nowiki> || common || 45–63 || ||
 |-
@@ -1190,6 +1298,8 @@
 | <nowiki>.*friedrichleibacher.*</nowiki> || common || 45–63 || ||
 |-
 | <nowiki>.*froc.*</nowiki> || pit || 46–63 || ||
+|-
+| <nowiki>.*front88.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*fucc$</nowiki> || common || 45–63 || ||
 |-
@@ -1200,6 +1310,8 @@
 | <nowiki>.*fudgepacker.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*fugly.*</nowiki> || common || 33–63 || ||
+|-
+| <nowiki>.*fuhrer.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*fuk$</nowiki> || een || 31–63 || een || 12–14
 |-
@@ -1253,6 +1365,8 @@
 |-
 | <nowiki>.*gaytard.*</nowiki> || common || 33–63 || ||
 |-
+| <nowiki>.*gaywad.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*geebag.*</nowiki> || pen || 59–63 || ||
 |-
 | <nowiki>.*geespot.*</nowiki> || common || 45–63 || ||
@@ -1275,6 +1389,8 @@
 |-
 | <nowiki>.*gilipuertas.*</nowiki> || pes || 45–63 || ||
 |-
+| <nowiki>.*gippo.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*gizzum.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*glandu.*</nowiki> || pfr || 45–63 || ||
@@ -1295,11 +1411,15 @@
 |-
 | <nowiki>.*gogolle.*</nowiki> || pfr || 45–63 || ||
 |-
+| <nowiki>.*golliwog.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*gollywog.*</nowiki> || tzh, common || 19–23, 33–63 || pen, pfr, pde, pit, pes, pnl, tzh, ten || 4–18
 |-
 | <nowiki>.*gonads.*</nowiki> || common || 45–63 || ||
 |-
 | <nowiki>.*gooch$</nowiki> || common || 45–63 || ||
+|-
+| <nowiki>.*gook.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*goolies.*</nowiki> || common || 45–63 || ||
 |-
@@ -1347,11 +1467,15 @@
 |-
 | <nowiki>.*guido.*</nowiki> || pen || 45–63 || ||
 |-
+| <nowiki>.*gyppie.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*gyppo.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*güevos.*</nowiki> || pes || 45–63 || pes || 4–14
 |-
 | <nowiki>.*gスポツト.*</nowiki> || jja || 19–63 || jja || 16–18
+|-
+| <nowiki>.*h!tler.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*h0m0.*</nowiki> || een, efr, ees || 25–63 || ||
 |-
@@ -1369,7 +1493,15 @@
 |-
 | <nowiki>.*hae6.*</nowiki> || pru || 62–63 || ||
 |-
+| <nowiki>.*hailhitla.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*hakenkreuz.*</nowiki> || common || 33–63 || ||
+|-
+| <nowiki>.*halfbreed.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*hamerskin.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*hammerskin.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*handjob.*</nowiki> || common || 45–63 || een || 4–14
 |-
@@ -1469,6 +1601,10 @@
 |-
 | <nowiki>.*hnubet.*</nowiki> || pru || 62–63 || ||
 |-
+| <nowiki>.*hobag.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*hoebag.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*hoer.*</nowiki> || pnl || 45–63 || een, pnl || 4–14
 |-
 | <nowiki>.*hom0.*</nowiki> || een, efr, ees || 25–63 || ||
@@ -1483,6 +1619,8 @@
 |-
 | <nowiki>.*hoormister.*</nowiki> || common || 33–63 || ||
 |-
+| <nowiki>.*horny.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*hostia.*</nowiki> || ees || 45–63 || een, efr, ees, pes || 4–14
 |-
 | <nowiki>.*hotmail\.co\.jp.*</nowiki> || jja || 19–63 || jja || 16–18
@@ -1495,9 +1633,21 @@
 |-
 | <nowiki>.*huevón.*</nowiki> || pes || 45–63 || ||
 |-
+| <nowiki>.*humper.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*humping.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*hure.*</nowiki> || pde || 45–63 || ||
 |-
 | <nowiki>.*huxepa.*</nowiki> || pru || 62–63 || ||
+|-
+| <nowiki>.*h¡tlér.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*hîťľèr.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*hįtler.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*hıtler.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*i\.softbank\.jp.*</nowiki> || jja || 19–63 || jja || 16–18
 |-
@@ -1533,9 +1683,13 @@
 |-
 | <nowiki>.*jackass.*</nowiki> || een || 45–63 || ||
 |-
+| <nowiki>.*jackedoff.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*jackingoff.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*jackoff.*</nowiki> || common || 45–63 || ||
+|-
+| <nowiki>.*jacksoff.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*jamesholmes.*</nowiki> || common || 45–63 || ||
 |-
@@ -1557,19 +1711,33 @@
 |-
 | <nowiki>.*jeffreydahmer.*</nowiki> || common || 45–63 || ||
 |-
+| <nowiki>.*jerkedoff.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*jerkingoff.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*jerkoff.*</nowiki> || common || 33–63 || een || 4–14
 |-
+| <nowiki>.*jerksoff.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*jesussucks.*</nowiki> || kko, czh, tzh || 19–63 || jja, een, pen, kko, czh, tzh, ten || 4–18
+|-
+| <nowiki>.*jewburn.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*jewexecute.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*jewexterminate.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*jewh8.*</nowiki> || common || 53–63 || ||
 |-
 | <nowiki>.*jewhate.*</nowiki> || common || 53–63 || ||
 |-
+| <nowiki>.*jewkil.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*jewslayer.*</nowiki> || common || 45–63 || ||
 |-
 | <nowiki>.*jezus.*</nowiki> || pnl || 45–63 || ||
+|-
+| <nowiki>.*jigabo.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*jiggaboo.*</nowiki> || common || 33–63 || ||
 |-
@@ -1605,6 +1773,8 @@
 |-
 | <nowiki>.*joto.*</nowiki> || ees || 45–63 || ||
 |-
+| <nowiki>.*junglebunny.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*jódete.*</nowiki> || ees, pes || 45–63 || pes || 4–14
 |-
 | <nowiki>.*kack.*</nowiki> || pde || 45–63 || ||
@@ -1618,6 +1788,8 @@
 | <nowiki>.*kakaшka.*</nowiki> || pru || 62–63 || ||
 |-
 | <nowiki>.*kakfretter.*</nowiki> || pnl || 45–63 || ||
+|-
+| <nowiki>.*kamasutra.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*kanack.*</nowiki> || pde || 45–63 || ||
 |-
@@ -1637,13 +1809,21 @@
 |-
 | <nowiki>.*kiff.*</nowiki> || pde || 45–63 || ||
 |-
+| <nowiki>.*kigy.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*kike.*</nowiki> || een, efr, pen, pfr, pit, pnl, ppt, pru, ept || 40–63 || ||
+|-
+| <nowiki>.*kilingjew.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*kiljew.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*killtran.*</nowiki> || common || 44–63 || ||
 |-
 | <nowiki>.*kittelaar.*</nowiki> || pnl || 45–63 || ||
 |-
 | <nowiki>.*kkk.*</nowiki> || jja, een, efr, ees, pen, pfr, pde, pit, pes, pnl, kko, czh, pru, tzh, common || 31–63 || ||
+|-
+| <nowiki>.*klansm.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*klojo.*</nowiki> || pnl || 45–63 || pnl || 4–14
 |-
@@ -1654,6 +1834,8 @@
 | <nowiki>.*klote.*</nowiki> || pde, pnl || 45–63 || ||
 |-
 | <nowiki>.*klunge.*</nowiki> || common || 45–63 || ||
+|-
+| <nowiki>.*klux.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*klöte.*</nowiki> || pde || 45–63 || pde || 4–14
 |-
@@ -1693,11 +1875,15 @@
 |-
 | <nowiki>.*k他命.*</nowiki> || czh || 24–63 || ||
 |-
+| <nowiki>.*ladyboy.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*lameculos.*</nowiki> || pes || 45–63 || pes || 4–14
 |-
 | <nowiki>.*lameojetes.*</nowiki> || pes || 45–63 || ||
 |-
 | <nowiki>.*lamzak.*</nowiki> || pnl || 45–63 || ||
+|-
+| <nowiki>.*landser$</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*lapzwans.*</nowiki> || pnl || 45–63 || ||
 |-
@@ -1959,9 +2145,13 @@
 |-
 | <nowiki>.*muff$</nowiki> || pen || 45–63 || ||
 |-
+| <nowiki>.*muffdiv.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*mujerzuela.*</nowiki> || ees || 45–63 || ||
 |-
 | <nowiki>.*munter.*</nowiki> || pen || 45–63 || ||
+|-
+| <nowiki>.*murder.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*mussolini.*</nowiki> || pru, tzh || 19–23, 45–63 || pen, pfr, pde, pit, pes, pnl, ppt, pru, ept, tzh, ten || 4–18
 |-
@@ -2014,6 +2204,8 @@
 | <nowiki>.*necrofiel.*</nowiki> || pnl || 45–63 || ||
 |-
 | <nowiki>.*necдa.*</nowiki> || pru || 62–63 || ||
+|-
+| <nowiki>.*neeger.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*neger.*</nowiki> || pde, pnl || 21–63 || pde, pnl || 4–14
 |-
@@ -2069,9 +2261,15 @@
 |-
 | <nowiki>.*nigger.*</nowiki> || een, pnl, common || 23–29, 45–63 || jja, een, pen, pde || 4–18
 |-
+| <nowiki>.*niglet.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*nignog.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*nigq.*</nowiki> || common || 31–63 || ||
+|-
+| <nowiki>.*niiga$</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*niigha.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*nikker.*</nowiki> || pnl || 45–63 || pnl || 4–14
 |-
@@ -2080,6 +2278,8 @@
 | <nowiki>.*nillkiggers.*</nowiki> || common || 40–63 || ||
 |-
 | <nowiki>.*nippl.*</nowiki> || een || 63 || ||
+|-
+| <nowiki>.*nipslip.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*niqg.*</nowiki> || common || 31–63 || ||
 |-
@@ -2117,6 +2317,8 @@
 |-
 | <nowiki>.*nude.*</nowiki> || een || 63 || ||
 |-
+| <nowiki>.*nudes$</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*nudist.*</nowiki> || een || 63 || ||
 |-
 | <nowiki>.*numpt.*</nowiki> || common || 45–63 || ||
@@ -2128,6 +2330,8 @@
 | <nowiki>.*nuдop.*</nowiki> || pru || 62–63 || ||
 |-
 | <nowiki>.*nword.*</nowiki> || common || 29–63 || ||
+|-
+| <nowiki>.*nympho.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*n¡gg.*</nowiki> || common || 42–63 || ||
 |-
@@ -2159,11 +2363,15 @@
 |-
 | <nowiki>.*optyfen.*</nowiki> || pnl || 45–63 || ||
 |-
+| <nowiki>.*oralsec.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*oralsex.*</nowiki> || tzh, common || 19–23, 45–63 || ||
 |-
 | <nowiki>.*orgasm.*</nowiki> || common || 45–63 || ||
 |-
 | <nowiki>.*orgy.*</nowiki> || een, pen, pde, pes, pnl || 45–63 || ||
+|-
+| <nowiki>.*osamabin.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*ostia.*</nowiki> || pes || 45–63 || ||
 |-
@@ -2176,6 +2384,8 @@
 | <nowiki>.*outlook\.com.*</nowiki> || common || 41–63 || ||
 |-
 | <nowiki>.*ovarios.*</nowiki> || pes || 45–63 || ees, pes, ept || 4–14
+|-
+| <nowiki>.*ovendodger.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*oxyetb.*</nowiki> || pru || 62–63 || ||
 |-
@@ -2207,6 +2417,8 @@
 |-
 | <nowiki>.*panocha.*</nowiki> || ees || 45–63 || ||
 |-
+| <nowiki>.*pantiless.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*panty.*</nowiki> || een || 63 || ||
 |-
 | <nowiki>.*papzak.*</nowiki> || pnl || 45–63 || pnl || 4–14
@@ -2231,6 +2443,8 @@
 |-
 | <nowiki>.*pazeb.*</nowiki> || pru || 62–63 || ||
 |-
+| <nowiki>.*peckerwood.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*pedazodeinutil.*</nowiki> || pes || 46–63 || ||
 |-
 | <nowiki>.*pedazodeinútil.*</nowiki> || pes || 45–63 || ||
@@ -2248,6 +2462,12 @@
 | <nowiki>.*peganomeupau.*</nowiki> || ept || 32–63 || ||
 |-
 | <nowiki>.*peganomeupinto.*</nowiki> || ept || 32–63 || ||
+|-
+| <nowiki>.*pegged.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*pegger.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*pegging.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*pekkaauvinen.*</nowiki> || common || 45–63 || ||
 |-
@@ -2268,6 +2488,8 @@
 | <nowiki>.*pendondesorejao.*</nowiki> || pes || 46–63 || ||
 |-
 | <nowiki>.*pendóndesorejao.*</nowiki> || pes || 45–63 || ||
+|-
+| <nowiki>.*penile.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*penis$</nowiki> || common || 45–63 || ||
 |-
@@ -2290,6 +2512,8 @@
 | <nowiki>.*perrosarnoso.*</nowiki> || pes || 45–63 || ees || 4–14
 |-
 | <nowiki>.*pervers.*</nowiki> || pde || 45–63 || ||
+|-
+| <nowiki>.*pervert.*</nowiki> || common || 63 || een || 4–14
 |-
 | <nowiki>.*petasse.*</nowiki> || pfr || 46–63 || ||
 |-
@@ -2403,6 +2627,8 @@
 |-
 | <nowiki>.*porcamadonna.*</nowiki> || pit || 45–63 || ||
 |-
+| <nowiki>.*porchmonkey.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*porcodidio.*</nowiki> || pit || 45–63 || ||
 |-
 | <nowiki>.*porcodio.*</nowiki> || pit || 45–63 || pit || 4–14
@@ -2440,6 +2666,8 @@
 | <nowiki>.*pouilleux.*</nowiki> || pfr || 45–63 || ||
 |-
 | <nowiki>.*pr0n.*</nowiki> || pru, tzh || 19–23, 45–63 || een, pen, pfr, pde, pit, pes, pnl, ppt, pru, ept, tzh, ten || 4–18
+|-
+| <nowiki>.*precum.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*preut.*</nowiki> || pnl || 45–63 || ||
 |-
@@ -2519,6 +2747,8 @@
 |-
 | <nowiki>.*prostituierte.*</nowiki> || pde || 45–63 || ||
 |-
+| <nowiki>.*prostitut.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*proudboy.*</nowiki> || common || 45–63 || ||
 |-
 | <nowiki>.*provulimia.*</nowiki> || pes || 45–63 || ||
@@ -2553,7 +2783,13 @@
 |-
 | <nowiki>.*pus\$y.*</nowiki> || common || 37–63 || ||
 |-
+| <nowiki>.*pusies.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*pussies.*</nowiki> || common || 63 || een || 4–14
+|-
 | <nowiki>.*pussy.*</nowiki> || een, tzh, common || 19–63 || jja, een, pen, pfr, pde, pit, pes, pnl, czh, ppt, pru, ept, tzh, ten || 4–18
+|-
+| <nowiki>.*pusylips.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*putain.*</nowiki> || efr, pfr || 23–63 || een, efr || 4–18
 |-
@@ -2651,6 +2887,8 @@
 |-
 | <nowiki>.*raghead.*</nowiki> || common || 33–63 || ||
 |-
+| <nowiki>.*rahowa.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*rahдoh.*</nowiki> || pru || 62–63 || ||
 |-
 | <nowiki>.*ramera.*</nowiki> || ees || 45–63 || ees, pes || 4–14
@@ -2680,6 +2918,8 @@
 | <nowiki>.*razehvareh.*</nowiki> || pru || 62–63 || ||
 |-
 | <nowiki>.*rectum.*</nowiki> || pnl || 45–63 || pde || 4–14
+|-
+| <nowiki>.*redskin.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*reefteef.*</nowiki> || pnl || 45–63 || ||
 |-
@@ -2845,6 +3085,8 @@
 |-
 | <nowiki>.*sheepshagger.*</nowiki> || common || 33–63 || ||
 |-
+| <nowiki>.*shemale.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*shirtlifter.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*shit.*</nowiki> || een, czh, tzh || 19–63 || jja, een, pen, czh, ept, tzh, ten || 4–18
@@ -2852,6 +3094,8 @@
 | <nowiki>.*shithead.*</nowiki> || common || 45–63 || ||
 |-
 | <nowiki>.*shiネ.*</nowiki> || jja || 53–63 || ||
+|-
+| <nowiki>.*sieghail.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*siegheil.*</nowiki> || pnl, common || 45–63 || ||
 |-
@@ -2877,6 +3121,8 @@
 |-
 | <nowiki>.*skinnybitch.*</nowiki> || pen || 45–63 || ||
 |-
+| <nowiki>.*slanteye.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*slapper.*</nowiki> || common || 45–63 || ||
 |-
 | <nowiki>.*slave.*</nowiki> || een, ees, pen, pde, pes, pnl, ppt, pru || 31–63 || een || 4–14
@@ -2884,6 +3130,10 @@
 | <nowiki>.*slet.*</nowiki> || pnl || 45–63 || ||
 |-
 | <nowiki>.*sloerie.*</nowiki> || pnl || 45–63 || pnl || 4–14
+|-
+| <nowiki>.*slopehead.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*slopehed.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*slut.*</nowiki> || een || 23–63 || jja, een, pen || 16–18
 |-
@@ -2920,6 +3170,8 @@
 | <nowiki>.*spast.*</nowiki> || pde, pnl || 45–63 || pde || 4–14
 |-
 | <nowiki>.*spastic$</nowiki> || common || 45–63 || ||
+|-
+| <nowiki>.*spazzy.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*sperm.*</nowiki> || pde || 45–63 || pde || 4–14
 |-
@@ -2975,6 +3227,8 @@
 |-
 | <nowiki>.*suicdebmbr.*</nowiki> || kko, czh, tzh || 19–63 || jja, een, pen, kko, czh, tzh, ten || 4–18
 |-
+| <nowiki>.*suicid.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*suicide.*</nowiki> || pen, kko, czh, tzh || 19–63 || jja, een, pen, kko, czh, tzh, ten || 4–18
 |-
 | <nowiki>.*supremaciablanca.*</nowiki> || common || 45–63 || ||
@@ -3002,6 +3256,8 @@
 | <nowiki>.*takkenwijf.*</nowiki> || pnl || 45–63 || ||
 |-
 | <nowiki>.*takkewijf.*</nowiki> || pnl || 45–63 || ||
+|-
+| <nowiki>.*taliban.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*tamzak.*</nowiki> || pnl || 45–63 || ||
 |-
@@ -3071,6 +3327,10 @@
 |-
 | <nowiki>.*thomashamilton.*</nowiki> || common || 45–63 || ||
 |-
+| <nowiki>.*threesome.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*threesum.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*tiaputa.*</nowiki> || pes || 46–63 || ||
 |-
 | <nowiki>.*tiazorra.*</nowiki> || pes || 46–63 || ||
@@ -3081,7 +3341,11 @@
 |-
 | <nowiki>.*timurbekmansurov.*</nowiki> || common || 45–63 || ||
 |-
+| <nowiki>.*titass.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*titler.*</nowiki> || common || 49–63 || ||
+|-
+| <nowiki>.*titsass.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*titt.*</nowiki> || pde || 45–63 || ||
 |-
@@ -3122,6 +3386,8 @@
 | <nowiki>.*tontolhaba.*</nowiki> || pes || 45–63 || een, efr, ees, pes || 4–14
 |-
 | <nowiki>.*tortillera.*</nowiki> || pes || 45–63 || ees, pes || 4–14
+|-
+| <nowiki>.*torture.*</nowiki> || common || 63 || een || 4–14
 |-
 | <nowiki>.*tosser.*</nowiki> || common || 33–63 || ||
 |-
@@ -3231,11 +3497,15 @@
 |-
 | <nowiki>.*unkiki.*</nowiki> || pes || 45–63 || ||
 |-
+| <nowiki>.*upskirt.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*vadge.*</nowiki> || een, pen, pde, pit, pnl, pru, common || 33–63 || ||
 |-
 | <nowiki>.*vagin.*</nowiki> || pfr || 45–63 || ||
 |-
 | <nowiki>.*vagina.*</nowiki> || common || 33–63 || een, pde, ept || 4–14
+|-
+| <nowiki>.*vajayjay.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*valeryfabrikant.*</nowiki> || common || 45–63 || ||
 |-
@@ -3263,6 +3533,10 @@
 |-
 | <nowiki>.*vetzak.*</nowiki> || pnl || 45–63 || pnl || 4–14
 |-
+| <nowiki>.*vibrator.*</nowiki> || common || 63 || pde, ept || 4–14
+|-
+| <nowiki>.*virgin$</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*viswijf.*</nowiki> || pnl || 45–63 || ||
 |-
 | <nowiki>.*vladimirmirgorod.*</nowiki> || common || 45–63 || ||
@@ -3275,6 +3549,8 @@
 |-
 | <nowiki>.*votze.*</nowiki> || pde || 45–63 || ||
 |-
+| <nowiki>.*voyeur.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*vuckoborilovic.*</nowiki> || common || 45–63 || ||
 |-
 | <nowiki>.*vulva.*</nowiki> || pnl, tzh || 19–23, 45–63 || een, pen, ept, tzh, ten || 4–18
@@ -3283,11 +3559,15 @@
 |-
 | <nowiki>.*wanker.*</nowiki> || common || 33–63 || een || 13–14
 |-
+| <nowiki>.*wankjob.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*wankshaft.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*wankstain.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*warumoshi.*</nowiki> || common || 19–63 || jja, een, pen || 18
+|-
+| <nowiki>.*wetback.*</nowiki> || common || 63 || een || 4–14
 |-
 | <nowiki>.*whipper.*</nowiki> || common || 31–63 || ||
 |-
@@ -3295,9 +3575,17 @@
 |-
 | <nowiki>.*whipr.*</nowiki> || common || 31–63 || ||
 |-
+| <nowiki>.*whitenat.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*whitepower.*</nowiki> || common || 45–63 || ||
 |-
 | <nowiki>.*whore$</nowiki> || common || 45–63 || ||
+|-
+| <nowiki>.*whorebag.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*whoremaster.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*whoremonger.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*wichs.*</nowiki> || pde || 45–63 || ||
 |-
@@ -3310,6 +3598,8 @@
 | <nowiki>.*windowlicker.*</nowiki> || common || 33–63 || ||
 |-
 | <nowiki>.*wix.*</nowiki> || pde || 45–63 || ||
+|-
+| <nowiki>.*wpww.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*wtf.*</nowiki> || tzh, common || 19–23, 33–63 || tzh, ten || 10–18
 |-
@@ -3365,6 +3655,10 @@
 |-
 | <nowiki>.*zinne$</nowiki> || pit || 45–63 || ||
 |-
+| <nowiki>.*zipperhead.*</nowiki> || common || 63 || ||
+|-
+| <nowiki>.*zipperhed.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*zob$</nowiki> || pfr || 45–63 || ||
 |-
 | <nowiki>.*zoccola.*</nowiki> || pit || 45–63 || ||
@@ -3391,11 +3685,17 @@
 |-
 | <nowiki>.*àḃćďęḟğẖĩǰḳĺḿňß.*</nowiki> || jja || 45–63 || ||
 |-
+| <nowiki>.*ädolf.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>.*érection.*</nowiki> || pfr || 45–63 || ||
+|-
+| <nowiki>.*ħìtļěr.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*Οンコ.*</nowiki> || jja || 32–63 || ||
 |-
 | <nowiki>.*Οンチ.*</nowiki> || jja || 33–63 || ||
+|-
+| <nowiki>.*ηitler.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>.*οンコ.*</nowiki> || jja || 32–63 || ||
 |-
@@ -6265,7 +6565,21 @@
 |-
 | <nowiki>^1488$</nowiki> || common || 51–63 || ||
 |-
+| <nowiki>^1888$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^18\.88$</nowiki> || common || 63 || ||
+|-
 | <nowiki>^18년.*</nowiki> || kko || 19–63 || kko || 4–18
+|-
+| <nowiki>^764$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^8814$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^8818$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^88~14$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^88~18$</nowiki> || common || 63 || ||
 |-
 | <nowiki>^a55$</nowiki> || een || 19–63 || een || 16–18
 |-
@@ -6294,6 +6608,12 @@
 | <nowiki>^afterlecker$</nowiki> || pde || 19–63 || pde || 16–18
 |-
 | <nowiki>^afterlutscher$</nowiki> || pde || 19–63 || pde || 16–18
+|-
+| <nowiki>^ak-47$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^ak47$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^akia$</nowiki> || common || 63 || ||
 |-
 | <nowiki>^alkoholiker$</nowiki> || pde || 19–63 || pde || 16–18
 |-
@@ -6325,6 +6645,16 @@
 |-
 | <nowiki>^aputadatuamãe$</nowiki> || ppt || 19–63 || ppt || 16–18
 |-
+| <nowiki>^ar 15$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^ar-10$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^ar-15$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^ar10$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^ar15$</nowiki> || common || 63 || ||
+|-
 | <nowiki>^arier$</nowiki> || pde || 19–63 || pde || 16–18
 |-
 | <nowiki>^arsch$</nowiki> || pde || 19–63 || pde || 4–18
@@ -6347,11 +6677,15 @@
 |-
 | <nowiki>^arse$</nowiki> || pen, tzh || 19–63 || pen, tzh, ten || 4–18
 |-
+| <nowiki>^aryan.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>^asl$</nowiki> || een || 19–63 || een || 16–18
 |-
 | <nowiki>^ass$</nowiki> || een, pen, pes, pnl, ppt, ept, tzh || 19–63 || een, pen, pfr, pde, pit, pes, pnl, ppt, pru, ept, tzh, ten || 4–18
 |-
 | <nowiki>^auschwitz$</nowiki> || pde || 19–63 || pde || 16–18
+|-
+| <nowiki>^ayak$</nowiki> || common || 63 || ||
 |-
 | <nowiki>^b17ch$</nowiki> || common || 19–63 || jja, een, pen || 16–18
 |-
@@ -6493,6 +6827,8 @@
 |-
 | <nowiki>^boner$</nowiki> || common || 19–63 || jja, een, pen, tzh, ten || 4–18
 |-
+| <nowiki>^boners$</nowiki> || common || 63 || ||
+|-
 | <nowiki>^boobs.*</nowiki> || common || 45–63 || ||
 |-
 | <nowiki>^bordadacona$</nowiki> || ppt || 19–63 || ppt || 16–18
@@ -6552,6 +6888,8 @@
 | <nowiki>^bückstück$</nowiki> || pde || 19–63 || pde || 16–18
 |-
 | <nowiki>^c0k$</nowiki> || common || 19–63 || jja, een, pen || 16–18
+|-
+| <nowiki>^c18.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>^cabra$</nowiki> || ppt || 19–63 || ppt || 16–18
 |-
@@ -6796,6 +7134,8 @@
 | <nowiki>^conneries$</nowiki> || efr || 19–63 || efr || 16–18
 |-
 | <nowiki>^coon.*</nowiki> || een, efr, ees, pen, pfr, pde, pit, pes, pnl, ppt, ept || 45–63 || ||
+|-
+| <nowiki>^cooter.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>^corno$</nowiki> || ept || 19–63 || ept || 16–18
 |-
@@ -7259,8 +7599,6 @@
 |-
 | <nowiki>^glatze$</nowiki> || pde || 19–63 || pde || 16–18
 |-
-| <nowiki>^gook$</nowiki> || common || 19–63 || jja, een, pen, tzh, ten || 4–18
-|-
 | <nowiki>^gordoseboso$</nowiki> || ppt, ept || 19–63 || ppt || 16–18
 |-
 | <nowiki>^gosse$</nowiki> || efr || 19–63 || efr || 16–18
@@ -7273,7 +7611,7 @@
 |-
 | <nowiki>^gueule$</nowiki> || efr || 19–63 || efr || 16–18
 |-
-| <nowiki>^gypo$</nowiki> || common || 19–63 || jja, een, pen, tzh, ten || 4–18
+| <nowiki>^gyp.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>^h8.*</nowiki> || common || 53–63 || ||
 |-
@@ -7288,6 +7626,8 @@
 | <nowiki>^herrenrasse$</nowiki> || pde || 19–63 || pde || 16–18
 |-
 | <nowiki>^hirni$</nowiki> || pde || 19–63 || pde || 16–18
+|-
+| <nowiki>^hitla$</nowiki> || common || 63 || ||
 |-
 | <nowiki>^hitle$</nowiki> || pfr || 49–63 || ||
 |-
@@ -7312,6 +7652,12 @@
 | <nowiki>^homokiller$</nowiki> || pde || 19–63 || pde || 4–18
 |-
 | <nowiki>^homostecher$</nowiki> || pde || 19–63 || pde || 4–18
+|-
+| <nowiki>^honkey$</nowiki> || common || 63 || jja || 4–14
+|-
+| <nowiki>^honkie$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^honky$</nowiki> || common || 63 || ||
 |-
 | <nowiki>^hoor$</nowiki> || pen || 19–63 || pen || 16–18
 |-
@@ -7673,6 +8019,8 @@
 |-
 | <nowiki>^nsu$</nowiki> || pde || 19–63 || pde || 16–18
 |-
+| <nowiki>^nudes.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>^négresse$</nowiki> || efr, pfr || 19–63 || efr, pfr || 4–18
 |-
 | <nowiki>^négro$</nowiki> || efr, pfr || 19–63 || efr, pfr || 16–18
@@ -7682,6 +8030,8 @@
 | <nowiki>^onanierfaust$</nowiki> || pde || 19–63 || pde || 16–18
 |-
 | <nowiki>^opqrstuvwxyzabcdefghijklmn$</nowiki> || jja || 45–63 || ||
+|-
+| <nowiki>^oral$</nowiki> || common || 63 || ||
 |-
 | <nowiki>^orgie$</nowiki> || pde || 19–63 || jja, pde || 4–18
 |-
@@ -7765,6 +8115,8 @@
 |-
 | <nowiki>^pepa$</nowiki> || ees || 19–63 || ees || 16–18
 |-
+| <nowiki>^perv$</nowiki> || common || 63 || ||
+|-
 | <nowiki>^pestarsch$</nowiki> || pde || 19–63 || pde || 16–18
 |-
 | <nowiki>^pestbeule$</nowiki> || pde || 19–63 || pde || 16–18
@@ -7794,6 +8146,8 @@
 | <nowiki>^pik$</nowiki> || pnl || 19–63 || pnl || 4–18
 |-
 | <nowiki>^pikey.*</nowiki> || common || 45–63 || ||
+|-
+| <nowiki>^piky.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>^pila$</nowiki> || ppt || 19–63 || ppt || 16–18
 |-
@@ -7945,6 +8299,8 @@
 |-
 | <nowiki>^pube$</nowiki> || een || 19–63 || een || 16–18
 |-
+| <nowiki>^pubic.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>^puceau$</nowiki> || efr || 19–63 || efr || 16–18
 |-
 | <nowiki>^pucelle$</nowiki> || efr || 19–63 || efr || 16–18
@@ -7960,6 +8316,12 @@
 | <nowiki>^punhetaça$</nowiki> || ppt, ept || 19–63 || ppt || 16–18
 |-
 | <nowiki>^punheteiro$</nowiki> || ppt, ept || 19–63 || ppt || 16–18
+|-
+| <nowiki>^pusie$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^pussie$</nowiki> || common || 63 || ||
+|-
+| <nowiki>^pusy$</nowiki> || common || 63 || ||
 |-
 | <nowiki>^puta$</nowiki> || ees, pes, ppt, ept || 19–63 || ees, pes, ppt, ept || 4–18
 |-
@@ -8253,6 +8615,8 @@
 |-
 | <nowiki>^spacken$</nowiki> || pde || 19–63 || pde || 16–18
 |-
+| <nowiki>^spak.*</nowiki> || common || 63 || ||
+|-
 | <nowiki>^spas$</nowiki> || pen, tzh || 19–63 || pen, pfr, pde, pit, pes, pnl, tzh, ten || 4–18
 |-
 | <nowiki>^spaz$</nowiki> || common || 19–63 || jja, een, pen, tzh, ten || 4–18
@@ -8531,7 +8895,7 @@
 |-
 | <nowiki>^waffenss$</nowiki> || pde || 21–63 || ||
 |-
-| <nowiki>^wank$</nowiki> || common || 19–63 || jja, een, pen || 16–18
+| <nowiki>^wank.*</nowiki> || common || 63 || ||
 |-
 | <nowiki>^wap$</nowiki> || een || 19–63 || een || 16–18
 |-
@@ -8681,11 +9045,19 @@
 |-
 | <nowiki>^자지$</nowiki> || kko || 19–63 || kko || 4–18
 |-
-| <nowiki>.*cocksuck.*</nowiki> || een || 23–62 || jja, een, pen || 16–18
+| <nowiki>.*aryannation.*</nowiki> || common || 45–62 || ||
+|-
+| <nowiki>.*cocksucker.*</nowiki> || tzh, common || 19–23, 33–62 || pen, tzh, ten || 4–18
 |-
 | <nowiki>^cocksucka$</nowiki> || pde || 19–62 || pde || 16–18
 |-
+| <nowiki>^gook$</nowiki> || common || 19–62 || jja, een, pen, tzh, ten || 4–18
+|-
+| <nowiki>^gypo$</nowiki> || common || 19–62 || jja, een, pen, tzh, ten || 4–18
+|-
 | <nowiki>^vibrator$</nowiki> || pde || 19–62 || pde || 16–18
+|-
+| <nowiki>^wank$</nowiki> || common || 19–62 || jja, een, pen || 16–18
 |-
 | <nowiki>.*xyй.*</nowiki> || pru || 45–60 || pru || 5–14
 |-
@@ -15321,10 +15693,6 @@
 |-
 | <nowiki>.*arse.*</nowiki> || || || een || 13–14
 |-
-| <nowiki>.*assbandit.*</nowiki> || || || een || 13–14
-|-
-| <nowiki>.*assclown.*</nowiki> || || || een || 13–14
-|-
 | <nowiki>.*atouche.*</nowiki> || || || efr || 4–14
 |-
 | <nowiki>.*ausgeleierte Fotze.*</nowiki> || || || pde || 4–14
@@ -15458,8 +15826,6 @@
 | <nowiki>.*comechichis.*</nowiki> || || || ees, pes, ept || 4–14
 |-
 | <nowiki>.*cona.*</nowiki> || || || ppt || 4–14
-|-
-| <nowiki>.*condom.*</nowiki> || || || een || 4–14
 |-
 | <nowiki>.*coneira.*</nowiki> || || || ppt || 4–14
 |-
@@ -15989,8 +16355,6 @@
 |-
 | <nowiki>.*perro sarnoso.*</nowiki> || || || pes || 4–14
 |-
-| <nowiki>.*pervert.*</nowiki> || || || een || 4–14
-|-
 | <nowiki>.*pestarsch.*</nowiki> || || || pde || 4–14
 |-
 | <nowiki>.*pestbeule.*</nowiki> || || || pde || 4–14
@@ -16048,8 +16412,6 @@
 | <nowiki>.*punheta.*</nowiki> || || || ppt || 4–14
 |-
 | <nowiki>.*punheteiro.*</nowiki> || || || ppt || 4–14
-|-
-| <nowiki>.*pussies.*</nowiki> || || || een || 4–14
 |-
 | <nowiki>.*puta.*</nowiki> || || || ees, ppt, ept || 4–14
 |-
@@ -16249,8 +16611,6 @@
 |-
 | <nowiki>.*tomarnocu.*</nowiki> || || || ppt || 4–14
 |-
-| <nowiki>.*torture.*</nowiki> || || || een || 4–14
-|-
 | <nowiki>.*tramp.*</nowiki> || || || een || 4–14
 |-
 | <nowiki>.*traveca.*</nowiki> || || || ppt || 4–14
@@ -16299,8 +16659,6 @@
 |-
 | <nowiki>.*vibrateur.*</nowiki> || || || efr || 4–14
 |-
-| <nowiki>.*vibrator.*</nowiki> || || || pde, ept || 4–14
-|-
 | <nowiki>.*viol.*</nowiki> || || || een, efr, ees || 4–14
 |-
 | <nowiki>.*vir-me.*</nowiki> || || || ppt || 4–14
@@ -16318,8 +16676,6 @@
 | <nowiki>.*warmer Bruder.*</nowiki> || || || pde || 4–14
 |-
 | <nowiki>.*waterboard.*</nowiki> || || || een || 4–14
-|-
-| <nowiki>.*wetback.*</nowiki> || || || een || 4–14
 |-
 | <nowiki>.*wh[o0]r.*</nowiki> || || || een || 4–14
 |-
@@ -16756,8 +17112,6 @@
 | <nowiki>^hoden.*</nowiki> || || || pde || 4–14
 |-
 | <nowiki>^homoklatscher$</nowiki> || || || pde || 4–14
-|-
-| <nowiki>^honkey$</nowiki> || || || jja || 4–14
 |-
 | <nowiki>^hooter[a-z]*$</nowiki> || || || jja || 11–14
 |-

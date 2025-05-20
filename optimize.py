@@ -19,8 +19,8 @@ def make_test_string_simple(pattern: str) -> str:
     """Constructs a comprehensive test string for a simple pattern.
     We replace ``.*`` with a private-use character to require a corresponding wildcard in any test."""
     return (pattern.removeprefix('^').removesuffix('$')
-            .replace('\.', '.').replace('\$', '$')
-            .replace('.*', '\uF000'))
+            .replace(r'\.', '.').replace(r'\$', '$')
+            .replace(r'.*', '\uF000').replace(r'\W+', '  '))
 
 def make_test_strings_complicated(pattern: str, n: int = 2) -> tuple[str, ...]:
     """Constructs up to n test strings for a complicated pattern.
@@ -125,6 +125,16 @@ def check_words_simple(simple: set[str]) -> set[str]:
             redundant.add('^' + word + '$')
     return redundant
 
+def check_words_multi_word(multi_word: set[str], simple: set[str]) -> set[str]:
+    """Checks for redundant multi-word patterns that are matched by a simple pattern."""
+    print(f'Checking {len(multi_word)} multi-word patterns against {len(simple)} simple patterns...')
+    redundant = set()
+    for word in multi_word:
+        if any(re.match((match := sub), make_test_string_simple(word)) for sub in simple):
+            if VERBOSE: print(f'\t{word} is a subset of {match}')
+            redundant.add(word)
+    return redundant
+
 def check_words_simple_complicated(simple: set[str], complicated: set[str]) -> set[str]:
     """Checks for redundant simple patterns that are matched by a complicated pattern."""
     print(f'Checking {len(simple)} simple patterns against {len(complicated)} complicated patterns...')
@@ -164,18 +174,27 @@ def check_words_complicated(complicated: set[str]) -> set[str]:
     return redundant
 
 def main(version: int, filename: str):
-    words = load_words(f'./romfs/{version}')
+    words = load_words(version)
     print(f'Found {len(words)} patterns')
 
+    multi_word = set()
     complicated = set()
     for word in words:
+        if r'\W+' in word:
+            multi_word.add(word)
+            continue
         if any(c in word for c in '[]()|?'):
             complicated.add(word)
             continue
 
-    redundant = check_words_simple(set(words) - complicated)
+    redundant = check_words_simple(set(words) - multi_word - complicated)
     words = set(words) - redundant
     print(f'Removed {len(redundant)} simple patterns')
+
+    if multi_word:
+        redundant = check_words_multi_word(multi_word, words - multi_word)
+        words = set(words) - redundant
+        print(f'Removed {len(redundant)} multi-word patterns')
 
     if complicated:
         redundant = check_words_simple_complicated(words - complicated, complicated)
@@ -193,6 +212,7 @@ if __name__ == '__main__':
     import os.path
     from natsort import natsorted
 
-    LATEST_VER = int(os.path.basename(natsorted(glob.glob('./romfs/*'))[-1]))
+    LATEST_VER = max(int(os.path.basename(natsorted(glob.glob('./romfs/NgWord/*'))[-1])),
+                     int(os.path.basename(natsorted(glob.glob('./romfs/NgWord2/*'))[-1])))
     # main(18, '3ds')
     main(LATEST_VER, 'switch')

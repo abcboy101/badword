@@ -21,11 +21,18 @@ def detect_language(path: str) -> Language:
     filename = os.path.splitext(os.path.basename(path))[0]
     return 'common' if filename == 'common' else LANGUAGES[int(filename)]
 
-def load_words(glob_pattern: str = './romfs/NgWord/*') -> dict[str, set[Entry]]:
+def load_words(version: int | str = '*') -> dict[str, set[Entry]]:
     """Loads all bad word lists in folders that match the specified glob pattern."""
     words: dict[str, set[Entry]] = dict()
+    load_words_regex(words, f'./romfs/NgWord/{version}')
+    load_words_ac(words, f'./parsed/NgWord2/{version}')
+    return words
+
+def load_words_regex(words: dict[str, set[Entry]], glob_pattern: str) -> None:
+    """Loads all regular expression lists in folders that match the specified glob pattern."""
     for folder in glob.glob(glob_pattern):
         version = int(os.path.basename(folder))
+        if version >= 45: continue  # does not appear to be used anymore
         for path in glob.glob(os.path.join(folder, '*.txt')):
             language = detect_language(path)
             with open(path, 'rb') as f:
@@ -34,7 +41,42 @@ def load_words(glob_pattern: str = './romfs/NgWord/*') -> dict[str, set[Entry]]:
                 buf = buf.replace(b'\r\n', b'\n')
             for word in buf.decode('utf-16').rstrip('\n').split('\n'):
                 words.setdefault(word, set()).add(Entry(language, version))
-    return words
+
+def convert_ac_to_regex(word: str, path: str) -> str:
+    # Convert literal characters to equivalent regex
+    word = (word.replace('.', r'\.')
+                .replace('*', r'\*')
+                .replace('^', r'\^')
+                .replace('$', r'\$'))
+    if 'b1' in path or 'not_b' in path:
+        return f'.*{word}.*'
+    elif 'b2' in path:
+        match word.startswith(r'\b'), word.endswith(r'\b'):
+            case True, True:  # \b____\b -> ^____$
+                return f'^{word[2:-2]}$'
+            case True, False:  # \b____ -> ^____.*
+                return f'^{word[2:]}.*'
+            case False, True:  # ____\b -> .*____$
+                return f'.*{word[:-2]}$'
+            case _:
+                raise ValueError(word)
+    else:
+        raise ValueError(f'{path} not recognized')
+
+def load_words_ac(words: dict[str, set[Entry]], glob_pattern: str) -> None:
+    """Loads all Aho-Corasick tries in folders that match the specified glob pattern."""
+    for folder in glob.glob(glob_pattern):
+        version = int(os.path.basename(folder))
+        if version < 45: continue  # does not appear to have been actively updated until 45
+        for path in glob.glob(os.path.join(folder, '*.txt')):
+            if any(keyword in path for keyword in ['similar_form', 'trie', 'b1']):
+                continue  # b1 is only censored when masking
+            language = detect_language(path.split('_')[1])
+            with open(path, 'r', encoding='utf-8') as f:
+                data = f.read()
+            for word in data.rstrip('\n').split('\n'):
+                word = convert_ac_to_regex(word, path)
+                words.setdefault(word, set()).add(Entry(language, version))
 
 def add_missing_versions(versions: SortedList[int]):
     """Adds missing versions that were not publicly released if the prior and following versions are included."""
