@@ -3622,8 +3622,10 @@
 ^bbwpfr$
 ^bbwpit$
 ^bbwpnl$
+^bbwpol$
 ^bbwppt$
 ^bbwpru$
+^bbwtha$
 ^bbwtzh$
 ^bettnasser$
 ^bettnasserin$

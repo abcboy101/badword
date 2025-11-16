@@ -10,7 +10,7 @@ from concurrent.futures.process import ProcessPoolExecutor
 
 from greenery import parse
 
-from compile import load_words
+from compile import load_words, LANGUAGES_NX
 
 VERBOSE = True
 
@@ -173,8 +173,8 @@ def check_words_complicated(complicated: set[str]) -> set[str]:
                     redundant.add(word)
     return redundant
 
-def main(version: int, filename: str):
-    words = load_words(version)
+def main(version: int, filename: str, languages: list[str] = None):
+    words = load_words(version, languages)
     print(f'Found {len(words)} patterns')
 
     multi_word = set()
@@ -214,5 +214,6 @@ if __name__ == '__main__':
 
     LATEST_VER = max(int(os.path.basename(natsorted(glob.glob('./romfs/NgWord/*'))[-1])),
                      int(os.path.basename(natsorted(glob.glob('./romfs/NgWord2/*'))[-1])))
-    # main(18, '3ds')
-    main(LATEST_VER, 'switch')
+    # main(18, '3ds', None)
+    main(LATEST_VER, 'switch', [lang for lang in LANGUAGES_NX if lang not in ['pol', 'tha']])
+    main(LATEST_VER, 'switch2', None)

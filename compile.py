@@ -2,39 +2,59 @@ import glob
 import itertools
 import json
 import os.path
-from collections.abc import Iterable, Sequence
+from collections.abc import Iterable
 from typing import Literal, NamedTuple, get_args
 
 from sortedcontainers import SortedList
 
-Language = Literal['jja', 'een', 'efr', 'ees', 'pen', 'pfr', 'pde', 'pit', 'pes',
-                   'pnl', 'kko', 'czh', 'ppt', 'pru', 'ept', 'tzh', 'ten', 'common']
-LANGUAGES: Sequence[Language, ...] = get_args(Language)
+Language = Literal[
+    'jja', 'een', 'efr', 'ees', 'pen', 'pfr', 'pde', 'pit',
+    'pes', 'pnl', 'kko', 'czh', 'ppt', 'pru', 'ept', 'tzh',
+    'ten',
+    'pol', 'tha', 'common'
+]
+LANGUAGES_3DS = [
+    'jja', 'een', 'efr', 'ees', 'pen', 'pfr', 'pde', 'pit',
+    'pes', 'pnl', 'kko', 'czh', 'ppt', 'pru', 'ept', 'tzh',
+    'ten',
+]
+LANGUAGES_NX = [
+    'jja', 'een', 'efr', 'ees', 'pen', 'pfr', 'pde', 'pit',
+    'pes', 'pnl', 'kko', 'czh', 'ppt', 'pru', 'ept', 'tzh',
+    'pol', 'tha', 'common',
+]
 
 class Entry(NamedTuple):
     """Ordered pair representing a particular version of a language-specific list."""
     language: Language
     version: int
 
-def detect_language(path: str) -> Language:
+def get_languages(version: int = '*'):
+    return LANGUAGES_NX if int(version) >= 19 else LANGUAGES_3DS
+
+def detect_language(path: str, version: int | str) -> Language:
     """Returns the language code corresponding to the specified path."""
     filename = os.path.splitext(os.path.basename(path))[0]
-    return 'common' if filename == 'common' else LANGUAGES[int(filename)]
+    if filename == 'common':
+        return 'common'
+    return get_languages(version)[int(filename)]
 
-def load_words(version: int | str = '*') -> dict[str, set[Entry]]:
+def load_words(version: int | str = '*', languages: Iterable[Language] = None) -> dict[str, set[Entry]]:
     """Loads all bad word lists in folders that match the specified glob pattern."""
     words: dict[str, set[Entry]] = dict()
-    load_words_regex(words, f'./romfs/NgWord/{version}')
-    load_words_ac(words, f'./parsed/NgWord2/{version}')
+    load_words_regex(words, f'./romfs/NgWord/{version}', languages)
+    load_words_ac(words, f'./parsed/NgWord2/{version}', languages)
     return words
 
-def load_words_regex(words: dict[str, set[Entry]], glob_pattern: str) -> None:
+def load_words_regex(words: dict[str, set[Entry]], glob_pattern: str, languages: Iterable[Language] = None) -> None:
     """Loads all regular expression lists in folders that match the specified glob pattern."""
     for folder in glob.glob(glob_pattern):
         version = int(os.path.basename(folder))
         if version >= 45: continue  # does not appear to be used anymore
         for path in glob.glob(os.path.join(folder, '*.txt')):
-            language = detect_language(path)
+            language = detect_language(path, version)
+            if languages and language not in languages:
+                continue
             with open(path, 'rb') as f:
                 buf = f.read()
             if version == 5 and language == 'ept':
@@ -63,7 +83,7 @@ def convert_ac_to_regex(word: str, path: str) -> str:
     else:
         raise ValueError(f'{path} not recognized')
 
-def load_words_ac(words: dict[str, set[Entry]], glob_pattern: str) -> None:
+def load_words_ac(words: dict[str, set[Entry]], glob_pattern: str, languages: Iterable[Language] = None) -> None:
     """Loads all Aho-Corasick tries in folders that match the specified glob pattern."""
     for folder in glob.glob(glob_pattern):
         version = int(os.path.basename(folder))
@@ -71,9 +91,13 @@ def load_words_ac(words: dict[str, set[Entry]], glob_pattern: str) -> None:
         for path in glob.glob(os.path.join(folder, '*.txt')):
             if any(keyword in path for keyword in ['similar_form', 'trie', 'b1']):
                 continue  # b1 is only censored when masking
-            language = detect_language(path.split('_')[1])
+            language = detect_language(path.split('_')[1], version)
+            if languages and language not in languages:
+                continue
             with open(path, 'r', encoding='utf-8') as f:
                 data = f.read()
+            if len(data) == 0:
+                continue
             for word in data.rstrip('\n').split('\n'):
                 word = convert_ac_to_regex(word, path)
                 words.setdefault(word, set()).add(Entry(language, version))
@@ -86,7 +110,7 @@ def add_missing_versions(versions: SortedList[int]):
         if (i - 1) in versions and (i + 1) in versions:
             versions.add(i)
 
-def make_version_range(versions: Iterable[int]) -> str:
+def make_version_range(versions: Iterable[int], latest: int = -1) -> str:
     """Converts an iterable collection of integers to a comma-separated list of ranges."""
     versions: SortedList[int] = SortedList(versions)
     if not versions:
@@ -100,14 +124,19 @@ def make_version_range(versions: Iterable[int]) -> str:
             ranges.append((start, old))
             start = new
     ranges.append((start, versions[-1]))
-    return ", ".join(f"{start}\u2013{end}" if start != end else str(start) for start, end in ranges)
+    s = ", ".join(f"{start}\u2013{end}" if start != end else str(start) for start, end in ranges)
+    if s.endswith(f"\u2013{latest}"):
+        s = s.replace(f"\u2013{latest}", '+')
+    elif s.endswith(f", {latest}") or s == str(latest):
+        s += '+'
+    return s
 
 def dump_to_json(words: dict[str, set[Entry]]):
     """Dumps the provided bad word list in JSON format."""
     output = {}
     for word in sorted(words):
         result = {}
-        for language, version in sorted(words[word], key=lambda x: (LANGUAGES.index(x[0]), x[1])):
+        for language, version in sorted(words[word], key=lambda x: (get_args(Language).index(x[0]), x[1])):
             result.setdefault(language, []).append(version)
         output[word] = result
     with open('output/badwords.json', 'w', encoding='utf-8') as f:
@@ -116,12 +145,13 @@ def dump_to_json(words: dict[str, set[Entry]]):
 def dump_to_wiki_table(words: dict[str, set[Entry]]):
     """Dumps the provided bad word list as a table in wikitext format."""
     output = []
+    latest = max(entry.version for entry in itertools.chain(*words.values()))
     for word in sorted(words):
         versions = SortedList({entry.version for entry in words[word]})
-        l1 = ', '.join(lang for lang in LANGUAGES if any(entry.language == lang for entry in words[word] if entry.version >= 19))
-        v1 = make_version_range(versions.irange(minimum=19))
-        l2 = ', '.join(lang for lang in LANGUAGES if any(entry.language == lang for entry in words[word] if entry.version <= 18))
-        v2 = make_version_range(versions.irange(maximum=18))
+        l1 = ', '.join(lang for lang in LANGUAGES_NX if any(entry.language == lang for entry in words[word] if entry.version >= 19))
+        v1 = make_version_range(versions.irange(minimum=19), latest)
+        l2 = ', '.join(lang for lang in LANGUAGES_3DS if any(entry.language == lang for entry in words[word] if entry.version <= 18))
+        v2 = make_version_range(versions.irange(maximum=18), latest)
         my_str = ' || '.join([f'|-\n| <nowiki>{word}</nowiki>', l1, v1, l2, v2]).replace('  ', ' ').rstrip(' ') + '\n'
         output.append((my_str, versions[-1]))
     with open('output/wiki.txt', 'w', encoding='utf-8') as f:
