@@ -148,9 +148,15 @@ def dump_to_wiki_table(words: dict[str, set[Entry]]):
     latest = max(entry.version for entry in itertools.chain(*words.values()))
     for word in sorted(words):
         versions = SortedList({entry.version for entry in words[word]})
-        l1 = ', '.join(lang for lang in LANGUAGES_NX if any(entry.language == lang for entry in words[word] if entry.version >= 19))
+        vmax1 = max(itertools.chain([-1], (version for version in versions if version >= 19)))
+        l1 = ', '.join((str(lang) if any(entry.language == lang for entry in words[word] if entry.version == vmax1)
+                        else f"''{lang}''")
+                       for lang in LANGUAGES_NX if any(entry.language == lang for entry in words[word] if entry.version >= 19))
         v1 = make_version_range(versions.irange(minimum=19), latest)
-        l2 = ', '.join(lang for lang in LANGUAGES_3DS if any(entry.language == lang for entry in words[word] if entry.version <= 18))
+        vmax2 = max(itertools.chain([-1], (version for version in versions if version <= 18)))
+        l2 = ', '.join((str(lang) if any(entry.language == lang for entry in words[word] if entry.version == vmax2)
+                        else f"''{lang}''")
+                       for lang in LANGUAGES_3DS if any(entry.language == lang for entry in words[word] if entry.version <= 18))
         v2 = make_version_range(versions.irange(maximum=18), latest)
         my_str = ' || '.join([f'|-\n| <nowiki>{word}</nowiki>', l1, v1, l2, v2]).replace('  ', ' ').rstrip(' ') + '\n'
         output.append((my_str, versions[-1]))
