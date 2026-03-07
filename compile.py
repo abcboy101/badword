@@ -2,6 +2,7 @@ import glob
 import itertools
 import json
 import os.path
+import re
 from collections.abc import Iterable
 from typing import Literal, NamedTuple, get_args
 
@@ -34,7 +35,9 @@ def get_languages(version: int = '*'):
 
 def detect_language(path: str, version: int | str) -> Language:
     """Returns the language code corresponding to the specified path."""
-    filename = os.path.splitext(os.path.basename(path))[0]
+    filename, extension = os.path.splitext(os.path.basename(path))
+    if filename.startswith('trie'):
+        filename = re.search(r'trie_(.+)_allow', path).group(1)
     if filename == 'common':
         return 'common'
     return get_languages(version)[int(filename)]

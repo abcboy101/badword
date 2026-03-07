@@ -1,0 +1,96 @@
+|-
+| <nowiki>analyse</nowiki> || <nowiki>.*anal.*</nowiki> || pde || 59+
+|-
+| <nowiki>badwordc_badwordc</nowiki> || <nowiki>^badwordc$</nowiki> || czh || 59+
+|-
+| <nowiki>badworde_badworde</nowiki> || <nowiki>^badworde$</nowiki> || een, efr, ees, ept || 59+
+|-
+| <nowiki>badwordj_badwordj</nowiki> || <nowiki>^badwordj$</nowiki> || jja || 59+
+|-
+| <nowiki>badwordk_badwordk</nowiki> || <nowiki>^badwordk$</nowiki> || kko || 59+
+|-
+| <nowiki>badwordp-badwordp</nowiki> || <nowiki>^badwordp$</nowiki> || pru || 59+
+|-
+| <nowiki>badwordp_badwordp</nowiki> || <nowiki>^badwordp$</nowiki> || pen, pfr, pde, pit, pes, pnl, ppt, pol || 59+
+|-
+| <nowiki>badwordt_badwordt</nowiki> || <nowiki>^badwordt$</nowiki> || tzh, tha || 59+
+|-
+| <nowiki>dickflüssig</nowiki> || <nowiki>.*dick.*</nowiki> || pde || 59+
+|-
+| <nowiki>drukker</nowiki> || <nowiki>.*rukker.*</nowiki> || pnl || 59+
+|-
+| <nowiki>fisioterapista</nowiki> || <nowiki>.*rapist.*</nowiki> || pes || 59+
+|-
+| <nowiki>geknikkerd</nowiki> || <nowiki>.*nikker.*</nowiki> || pnl || 59+
+|-
+| <nowiki>gladjanus</nowiki> || <nowiki>.*anus.*</nowiki> || pnl || 59+
+|-
+| <nowiki>grape</nowiki> || <nowiki>.*rape.*</nowiki> || een || 59+
+|-
+| <nowiki>hoera</nowiki> || <nowiki>.*hoer.*</nowiki> || pnl || 59+
+|-
+| <nowiki>iwashita</nowiki> || <nowiki>.*shit.*</nowiki> || een || 59+
+|-
+| <nowiki>joy-con</nowiki> || <nowiki>^con$</nowiki> || common || 59+
+|-
+| <nowiki>kanal</nowiki> || <nowiki>.*anal.*</nowiki> || pde || 59+
+|-
+| <nowiki>kanusport</nowiki> || <nowiki>.*anus.*</nowiki> || pde || 59+
+|-
+| <nowiki>killian</nowiki> || <nowiki>^kill.*</nowiki> || common || 59+
+|-
+| <nowiki>knikker</nowiki> || <nowiki>.*nikker.*</nowiki> || pnl || 59+
+|-
+| <nowiki>knikkeren</nowiki> || <nowiki>.*nikker.*</nowiki> || pnl || 59+
+|-
+| <nowiki>knikkers</nowiki> || <nowiki>.*nikker.*</nowiki> || pnl || 59+
+|-
+| <nowiki>lesboek</nowiki> || <nowiki>^lesbo.*</nowiki> || pnl || 59+
+|-
+| <nowiki>negeren</nowiki> || <nowiki>.*neger.*</nowiki> || pnl || 59+
+|-
+| <nowiki>nintendo</nowiki> || — || common || 59+
+|-
+| <nowiki>sementa</nowiki> || <nowiki>.*semen.*</nowiki> || een || 59+
+|-
+| <nowiki>skyscraper</nowiki> || <nowiki>.*rape.*</nowiki> || een || 59+
+|-
+| <nowiki>takeshita</nowiki> || <nowiki>.*shit.*</nowiki> || een || 59+
+|-
+| <nowiki>trimmen</nowiki> || <nowiki>.*rimmen.*</nowiki> || pnl || 59+
+|-
+| <nowiki>versleten</nowiki> || <nowiki>.*slet.*</nowiki> || pnl || 59+
+|-
+| <nowiki>yoshi time</nowiki> || <nowiki>.*shit.*</nowiki> || een || 59+
+|-
+| <nowiki>yoshitime</nowiki> || <nowiki>.*shit.*</nowiki> || een || 59+
+|-
+| <nowiki>банально</nowiki> || <nowiki>.*анально.*</nowiki> || pru || 59+
+|-
+| <nowiki>велосипедик</nowiki> || <nowiki>.*педик.*</nowiki> || pru || 59+
+|-
+| <nowiki>застрахуйте</nowiki> || <nowiki>.*хуй.*</nowiki> || pru || 59+
+|-
+| <nowiki>команда</nowiki> || <nowiki>.*манда.*</nowiki> || pru || 59+
+|-
+| <nowiki>мандарин</nowiki> || <nowiki>.*манда.*</nowiki> || pru || 59+
+|-
+| <nowiki>мандаринка</nowiki> || <nowiki>.*манда.*</nowiki> || pru || 59+
+|-
+| <nowiki>мандат</nowiki> || <nowiki>.*манда.*</nowiki> || pru || 59+
+|-
+| <nowiki>подстрахуйте</nowiki> || <nowiki>.*хуй.*</nowiki> || pru || 59+
+|-
+| <nowiki>アアアアイアウアエアオアアア</nowiki> || <nowiki>.*アアアイアウアエアオアア.*</nowiki> || jja || 59+
+|-
+| <nowiki>アイアウアエアオ</nowiki> || <nowiki>.*アアアイアウアエアオアア.*</nowiki> || jja || 59+
+|-
+| <nowiki>カケカコカカカカ</nowiki> || <nowiki>^カカカキカクカケカコカカ.*</nowiki> || jja || 59+
+|-
+| <nowiki>ガガガガギガグガゲガゴガガガ</nowiki> || <nowiki>.*ガガガギガグガゲガゴガガ.*</nowiki> || jja || 59+
+|-
+| <nowiki>ササササシサスサセ</nowiki> || <nowiki>.*サササシサスサセサソササ$</nowiki> || jja || 59+
+|-
+| <nowiki>シワルモシ</nowiki> || <nowiki>.*ワルモシ.*</nowiki> || common || 59+
+|-
+| <nowiki>タ1タタ2タチ3タツaタテbタトcト</nowiki> || <nowiki>.*1タタ2タチ3タツaタテbタトc.*</nowiki> || jja || 59+
