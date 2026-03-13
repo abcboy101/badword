@@ -1,0 +1,158 @@
+|-
+| <nowiki>!</nowiki> || <nowiki>i</nowiki> || 45+
+|-
+| <nowiki>$</nowiki> || <nowiki>s</nowiki> || 45+
+|-
+| <nowiki>+</nowiki> || <nowiki>t</nowiki> || 45+
+|-
+| <nowiki>0</nowiki> || <nowiki>o</nowiki> || 45+
+|-
+| <nowiki>1</nowiki> || <nowiki>i</nowiki> || 45+
+|-
+| <nowiki>3</nowiki> || <nowiki>e</nowiki> || 45+
+|-
+| <nowiki>4</nowiki> || <nowiki>a</nowiki> || 45+
+|-
+| <nowiki>5</nowiki> || <nowiki>s</nowiki> || 45+
+|-
+| <nowiki>vv</nowiki> || <nowiki>w</nowiki> || 45+
+|-
+| <nowiki>|</nowiki> || <nowiki>i</nowiki> || 45+
+|-
+| <nowiki>|-|</nowiki> || <nowiki>h</nowiki> || 45+
+|-
+| <nowiki>¡</nowiki> || <nowiki>i</nowiki> || 45+
+|-
+| <nowiki>£</nowiki> || <nowiki>l</nowiki> || 45+
+|-
+| <nowiki>¥</nowiki> || <nowiki>y</nowiki> || 45+
+|-
+| <nowiki>§</nowiki> || <nowiki>s</nowiki> || 45+
+|-
+| <nowiki>µ</nowiki> || <nowiki>u</nowiki> || 45+
+|-
+| <nowiki>¶</nowiki> || <nowiki>p</nowiki> || 45+
+|-
+| <nowiki>ø</nowiki> || <nowiki>o</nowiki> || 45+
+|-
+| <nowiki>ƒ</nowiki> || <nowiki>f</nowiki> || 47+
+|-
+| <nowiki>α</nowiki> || <nowiki>a</nowiki> || 45+
+|-
+| <nowiki>β</nowiki> || <nowiki>b</nowiki> || 45+
+|-
+| <nowiki>γ</nowiki> || <nowiki>r</nowiki> || 45+
+|-
+| <nowiki>ε</nowiki> || <nowiki>e</nowiki> || 45+
+|-
+| <nowiki>κ</nowiki> || <nowiki>k</nowiki> || 45+
+|-
+| <nowiki>μ</nowiki> || <nowiki>m</nowiki> || 45+
+|-
+| <nowiki>ν</nowiki> || <nowiki>v</nowiki> || 45+
+|-
+| <nowiki>υ</nowiki> || <nowiki>u</nowiki> || 45+
+|-
+| <nowiki>χ</nowiki> || <nowiki>x</nowiki> || 45+
+|-
+| <nowiki>ω</nowiki> || <nowiki>w</nowiki> || 45+
+|-
+| <nowiki>а</nowiki> || <nowiki>a</nowiki> || 45+
+|-
+| <nowiki>б</nowiki> || <nowiki>b</nowiki> || 45+
+|-
+| <nowiki>в</nowiki> || <nowiki>b</nowiki> || 45+
+|-
+| <nowiki>г</nowiki> || <nowiki>r</nowiki> || 45+
+|-
+| <nowiki>д</nowiki> || <nowiki>a</nowiki> || 45+
+|-
+| <nowiki>е</nowiki> || <nowiki>e</nowiki> || 45+
+|-
+| <nowiki>ж</nowiki> || <nowiki>x</nowiki> || 45+
+|-
+| <nowiki>з</nowiki> || <nowiki>e</nowiki> || 45+
+|-
+| <nowiki>и</nowiki> || <nowiki>n</nowiki> || 45+
+|-
+| <nowiki>й</nowiki> || <nowiki>n</nowiki> || 45+
+|-
+| <nowiki>к</nowiki> || <nowiki>k</nowiki> || 45+
+|-
+| <nowiki>м</nowiki> || <nowiki>m</nowiki> || 45+
+|-
+| <nowiki>н</nowiki> || <nowiki>h</nowiki> || 45+
+|-
+| <nowiki>о</nowiki> || <nowiki>o</nowiki> || 45+
+|-
+| <nowiki>п</nowiki> || <nowiki>n</nowiki> || 45+
+|-
+| <nowiki>р</nowiki> || <nowiki>p</nowiki> || 45+
+|-
+| <nowiki>с</nowiki> || <nowiki>c</nowiki> || 45+
+|-
+| <nowiki>т</nowiki> || <nowiki>t</nowiki> || 45+
+|-
+| <nowiki>у</nowiki> || <nowiki>y</nowiki> || 45+
+|-
+| <nowiki>х</nowiki> || <nowiki>x</nowiki> || 45+
+|-
+| <nowiki>ц</nowiki> || <nowiki>u</nowiki> || 45+
+|-
+| <nowiki>ч</nowiki> || <nowiki>y</nowiki> || 45+
+|-
+| <nowiki>ш</nowiki> || <nowiki>w</nowiki> || 45+
+|-
+| <nowiki>щ</nowiki> || <nowiki>w</nowiki> || 45+
+|-
+| <nowiki>ъ</nowiki> || <nowiki>b</nowiki> || 45+
+|-
+| <nowiki>ь</nowiki> || <nowiki>b</nowiki> || 45+
+|-
+| <nowiki>э</nowiki> || <nowiki>e</nowiki> || 45+
+|-
+| <nowiki>я</nowiki> || <nowiki>r</nowiki> || 45+
+|-
+| <nowiki>†</nowiki> || <nowiki>t</nowiki> || 45+
+|-
+| <nowiki>‡</nowiki> || <nowiki>t</nowiki> || 45+
+|-
+| <nowiki>₩</nowiki> || <nowiki>w</nowiki> || 45+
+|-
+| <nowiki>€</nowiki> || <nowiki>e</nowiki> || 45+
+|-
+| <nowiki>₽</nowiki> || <nowiki>p</nowiki> || 45+
+|-
+| <nowiki>∀</nowiki> || <nowiki>a</nowiki> || 45+
+|-
+| <nowiki>⊂</nowiki> || <nowiki>c</nowiki> || 45+
+|-
+| <nowiki>□</nowiki> || <nowiki>ロ</nowiki> || 45+
+|-
+| <nowiki>○</nowiki> || <nowiki>o</nowiki> || 45+
+|-
+| <nowiki>◎</nowiki> || <nowiki>o</nowiki> || 45+
+|-
+| <nowiki>◎◎</nowiki> || <nowiki>oo</nowiki> || 45+
+|-
+| <nowiki>●</nowiki> || <nowiki>o</nowiki> || 45+
+|-
+| <nowiki>♭</nowiki> || <nowiki>b</nowiki> || 45+
+|-
+| <nowiki>〇</nowiki> || <nowiki>o</nowiki> || 45+
+|-
+| <nowiki>ソ</nowiki> || <nowiki>ン</nowiki> || 45+
+|-
+| <nowiki>ゾ</nowiki> || <nowiki>ン</nowiki> || 45+
+|-
+| <nowiki>タヒ</nowiki> || <nowiki>死</nowiki> || 45+
+|-
+| <nowiki>リ</nowiki> || <nowiki>ij</nowiki> || 45+
+|-
+| <nowiki>＋</nowiki> || <nowiki>t</nowiki> || 45+
+|-
+| <nowiki>л</nowiki> || <nowiki>n</nowiki> || 45
+|-
+| <nowiki>ф</nowiki> || <nowiki>o</nowiki> || 45
+|-
+| <nowiki>ю</nowiki> || <nowiki>o</nowiki> || 45
