@@ -1,0 +1,2 @@
+\bbadwordp\b
+\bbbwpol\b

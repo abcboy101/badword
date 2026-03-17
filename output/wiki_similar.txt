@@ -29,8 +29,6 @@
 |-
 | <nowiki>§</nowiki> || <nowiki>s</nowiki> || 45+
 |-
-| <nowiki>µ</nowiki> || <nowiki>u</nowiki> || 45+
-|-
 | <nowiki>¶</nowiki> || <nowiki>p</nowiki> || 45+
 |-
 | <nowiki>ø</nowiki> || <nowiki>o</nowiki> || 45+
@@ -45,11 +43,23 @@
 |-
 | <nowiki>ε</nowiki> || <nowiki>e</nowiki> || 45+
 |-
+| <nowiki>ζ</nowiki> || <nowiki>z</nowiki> || 66+
+|-
+| <nowiki>η</nowiki> || <nowiki>h</nowiki> || 66+
+|-
+| <nowiki>ι</nowiki> || <nowiki>i</nowiki> || 66+
+|-
 | <nowiki>κ</nowiki> || <nowiki>k</nowiki> || 45+
 |-
 | <nowiki>μ</nowiki> || <nowiki>m</nowiki> || 45+
 |-
-| <nowiki>ν</nowiki> || <nowiki>v</nowiki> || 45+
+| <nowiki>ν</nowiki> || <nowiki>n</nowiki> || 66+
+|-
+| <nowiki>ο</nowiki> || <nowiki>o</nowiki> || 66+
+|-
+| <nowiki>ρ</nowiki> || <nowiki>p</nowiki> || 66+
+|-
+| <nowiki>τ</nowiki> || <nowiki>t</nowiki> || 66+
 |-
 | <nowiki>υ</nowiki> || <nowiki>u</nowiki> || 45+
 |-
@@ -150,6 +160,10 @@
 | <nowiki>リ</nowiki> || <nowiki>ij</nowiki> || 45+
 |-
 | <nowiki>＋</nowiki> || <nowiki>t</nowiki> || 45+
+|-
+| <nowiki>µ</nowiki> || <nowiki>u</nowiki> || 45–65
+|-
+| <nowiki>ν</nowiki> || <nowiki>v</nowiki> || 45–65
 |-
 | <nowiki>л</nowiki> || <nowiki>n</nowiki> || 45
 |-
