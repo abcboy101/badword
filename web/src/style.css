@@ -1,0 +1,536 @@
+/* #region Colorschemes */
+:root {
+  --scale: 0.575;
+  --body-bg-color: light-dark(#414143, #0E0E16);
+  --lower-bg-color: light-dark(#EFEFEF, #2E2E2E);
+  --lower-tile-color: light-dark(#FEFEFE, #444444);
+  --lower-text-color: light-dark(#101010, #E0E0E0);
+  --highlight-bg-color: light-dark(#0266D8, #2FB1E3);
+  --highlight-text-color: light-dark(#FFFFFF, #0A0A0A);
+  --disabled-bg-color: light-dark(#E0E0E0, #262626);
+  --disabled-text-color: light-dark(#C0C0C0, #606060);
+  --active-text-color: light-dark(#0266D8, #20CBFF);
+  --active-text-color-invert: light-dark(#20CBFF, #0266D8);
+
+  --red-color: light-dark(
+    oklch(from #0266D8 l c calc(h + 30 + 120)),
+    oklch(from #2FB1E3 l c calc(h + 45 + 120))
+  );
+  --green-color: light-dark(
+    oklch(from #0266D8 l c calc(h + 30 - 120)),
+    oklch(from #2FB1E3 l c calc(h + 45 - 120))
+  );
+  --yellow-color: light-dark(
+    oklch(from #0266D8 l c calc(h + 30 + 180)),
+    oklch(from #2FB1E3 l c calc(h + 45 + 180))
+  );
+
+  color-scheme: light dark;
+  caret-color: light-dark(#49B0FF, #2A6897);
+}
+
+::selection {
+  background-color: #8EA4A2DB;
+  caret-color: light-dark(#47A7F3, #49B0FF);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+.mode-light {
+  color-scheme: light;
+}
+
+.mode-dark {
+  color-scheme: dark;
+}
+/* #endregion */
+
+/* #region General styles */
+* {
+  box-sizing: border-box;
+  text-box-trim: trim-both;
+  text-box-edge: text;
+  font-variant-emoji: text;
+  font-size-adjust: 0.592773;
+}
+
+body {
+  display: grid;
+  grid-template-rows: repeat(2, auto) minmax(0, 1fr);
+  min-height: 100dvh;
+  max-width: calc(var(--scale) * 1920px);
+  margin: 0 auto;
+  background: var(--body-bg-color);
+  color: white;
+  font-family:
+    "nintendo_udsg std_003", "NintendoExt003 R", "nintendo_udsg ext_zh-cn_003", "nintendo_udsg org_zh-cn_003", "nintendo_udsg ko_003", "UD新ゴ R", "UD Shin Go Regular",
+    "nintendo_udjxh-db_zh-tw_003", "AR UDJingxihei DB",
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", "Noto Sans CJK JP", "Noto Sans JP",
+    sans-serif;
+  font-size: calc(var(--scale) * 32pt);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--active-text-color);
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+input[type=text], select, input[type=submit], input[type=button], button, textarea {
+  background: var(--body-bg-color);
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border: calc(var(--scale) * 3px) solid white;
+  border-radius: calc(var(--scale) * 16px);
+  padding: calc(var(--scale) * 4px) calc(var(--scale) * 8px);
+}
+
+input[type=submit], input[type=button], button {
+  user-select: none;
+  border: none;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+/* #endregion */
+
+/* #region Main layout */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem 1rem 0 1rem;
+  font-size: 76.5%;
+}
+
+main {
+  --main-padding: clamp(1rem, calc(var(--scale) * 13.3333vw), calc(var(--scale) * 8rem));
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: calc(var(--scale) * 1080px);
+}
+
+@media (width <= 768px) {
+  :root {
+    --scale: 0.5;
+  }
+
+  main {
+    --main-padding: 1rem;
+  }
+}
+
+footer {
+  display: flex;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  align-items: end;
+  background: var(--lower-bg-color);
+  color: var(--lower-text-color);
+  padding: 1rem calc(0.75 * 2.25em + 2rem);
+  font-size: 76.5%;
+}
+
+#lng {
+  position: absolute;
+  user-select: none;
+  cursor: default;
+  font-size: 75%;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: calc(var(--scale) * 3px) solid currentColor;
+  border-radius: calc(var(--scale) * 16px);
+  height: 2.25em;
+  width: 2.25em;
+}
+
+.textbox-container {
+  display: grid;
+  padding-top: calc(var(--scale) * 4rem);
+  padding-bottom:  calc(var(--scale) * 1rem);
+  padding-left: var(--main-padding);
+  padding-right: var(--main-padding);
+}
+
+.options-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  gap: 0.1rem 0.5rem;
+  margin-left: auto;
+}
+
+.options-container label {
+  font-weight: bold;
+}
+
+.result-container {
+  display: grid;
+  align-content: start;
+  font-size: 85%;
+  border-top-left-radius: calc(var(--scale) * 30px);
+  border-top-right-radius: calc(var(--scale) * 30px);
+  padding-top: calc(var(--scale) * 24px);
+  background: var(--lower-bg-color);
+  color: var(--lower-text-color);
+  gap: calc(var(--scale) * 24px);
+}
+/* #endregion */
+
+/* #region Textbox area */
+#textbox-single, textarea {
+  border: none;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+#textbox-single:focus, textarea:focus {
+  outline: none;
+}
+
+#textbox-single {
+  border-radius: 0;
+  border-bottom: calc(var(--scale) * 4px) solid white;
+  padding: 0 calc(var(--scale) * 5px);
+  margin-top: calc(var(--scale) * 103px);
+  line-height: 1;
+}
+
+#textbox-single-label {
+  position: relative;
+  left: calc(var(--scale) * -3px);
+  top: calc(var(--scale) * 3px);
+}
+
+textarea {
+  display: block;
+  padding: calc(var(--scale) * 19px) calc(var(--scale) * 19px) calc(var(--scale) * 19px) calc(var(--scale) * 27px);
+  min-height: calc(var(--scale) * (283px - 2 * 3px));
+  line-height: 1.7;
+  text-overflow: clip;
+  resize: none;
+  scrollbar-width: thin;
+  scrollbar-color: light-dark(#D4D4D4, #606060) transparent;
+  scrollbar-gutter: stable;
+  border-radius: calc(var(--scale) * (16px - 3px));
+}
+
+.textbox-multiple-outer {
+  border: calc(var(--scale) * 3px) solid #FFFFFF;
+  border-radius: calc(var(--scale) * 16px);
+  margin-top: calc(var(--scale) * 16px);
+  margin-bottom: calc(var(--scale) * 2px);
+  min-height: calc(var(--scale) * 283px);
+  overflow: hidden;
+}
+
+.character-count {
+  text-align: right;
+  font-size: 66.6667%;
+  margin-bottom: calc(var(--scale) * 6px);
+}
+
+#textbox-single-character-count {
+  height: calc(var(--scale) * (4rem + 58px));
+}
+
+#textbox-multiple-character-count {
+  height: calc(var(--scale) * 4rem);
+}
+/* #endregion */
+
+/* #region Lower area */
+.status {
+  font-size: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-wrap: balance;
+  word-break: auto-phrase;
+  line-break: strict;
+  padding: 0.25rem 0.5rem;
+  background: var(--disabled-bg-color);
+  border-radius: calc(var(--scale) * 35px);
+  min-height: calc(var(--scale) * 70px);
+  margin-left: var(--main-padding);
+  margin-right: var(--main-padding);
+}
+
+.languages {
+  --item-count: 20;
+  --language-gap: 6px;
+  --max-column-count: 10;
+
+  /* Calculate the available width */
+  --average-item-width: calc((1920px - (2 * var(--main-padding) / var(--scale))) / var(--max-column-count));
+  --grid-width: calc((min(1920px * var(--scale), 100dvw) - 2 * var(--main-padding)) / var(--scale));
+
+  /* Calculate how many columns would be needed to fill the available width */
+  --item-grid-width-ratio: 10;
+  --fit-column-count: calc(min(var(--max-column-count), round(up, var(--item-grid-width-ratio))));
+
+  /* Calculate the actual grid dimensions */
+  --row-count: calc(round(up, var(--item-count) / var(--fit-column-count)));
+  --column-count: calc(round(up, var(--item-count) / var(--row-count)));
+  --language-width: calc((var(--grid-width) - (var(--language-gap) * (var(--column-count) - 1))) / var(--column-count));
+
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), 1fr);
+  gap: calc(var(--scale) * var(--language-gap));
+  justify-self: center;
+  align-content: center;
+  width: 100%;
+  padding-left: var(--main-padding);
+  padding-right: var(--main-padding);
+}
+
+@supports (width: calc(1% / 1px * 1px)) {
+  .languages {
+    /* Use division with unit support */
+    --item-grid-width-ratio: calc(var(--grid-width) / var(--average-item-width));
+  }
+}
+
+.language {
+  --language-bg-color: var(--lower-tile-color);
+  --language-text-color: var(--lower-text-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: calc(var(--scale) * 8px);
+  background: var(--language-bg-color);
+  color: var(--language-text-color);
+  border-radius: calc(var(--scale) * 2px);
+  height: calc(var(--scale) * 70px);
+}
+
+.language.active {
+  --language-text-color: var(--active-text-color-invert);
+}
+
+.language:active {
+  --language-text-color: var(--highlight-text-color);
+  --language-bg-color: var(--highlight-bg-color);
+}
+
+.region-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(var(--scale) * 9px);
+  left: calc(var(--scale) * 9px);
+  height: calc(var(--scale) * 28px);
+  width: calc(var(--scale) * 28px);
+  background: var(--language-text-color);
+  color: var(--language-bg-color);
+  border-radius: 50%;
+  font-size: 50%;
+  font-weight: bold;
+}
+
+#language-common {
+  --parity: calc(mod(var(--row-count) * var(--column-count), 2));
+  grid-column: span calc(1 + var(--parity));
+}
+
+#language-common .language-code {
+  --min-scale: 0.75;
+  --max-scale: 1;
+  scale: calc(var(--min-scale) + (var(--max-scale) - var(--min-scale)) * var(--parity));
+}
+
+.language-ok {
+  --language-bg-color: var(--green-color);
+  --language-text-color: var(--highlight-text-color);
+}
+
+.language-ng {
+  --language-bg-color: var(--red-color);
+  --language-text-color: var(--highlight-text-color);
+}
+
+:disabled {
+  --language-bg-color: var(--disabled-bg-color);
+  --language-text-color: var(--disabled-text-color);
+}
+
+.patterns {
+  font-size: 90%;
+  margin-left: var(--main-padding);
+  margin-right: var(--main-padding);
+  overflow-x: auto;
+}
+
+.patterns table {
+  min-width: 100%;
+  border-collapse: collapse;
+  border-style: hidden;
+}
+
+.patterns td, .patterns th {
+  border: calc(var(--scale) * 6px) solid var(--lower-bg-color);
+  background: var(--lower-tile-color);
+  border-radius: calc(var(--scale) * 2px);
+  padding: 0.25rem 0.5rem;
+}
+
+.pattern {
+  white-space: nowrap;
+}
+
+.overridden .symbol,
+.overridden .text {
+  color: var(--disabled-text-color);
+}
+
+s, .overridden .text {
+  color: var(--disabled-text-color);
+  text-decoration: line-through;
+}
+
+.ng td {
+  background: var(--red-color);
+  color: var(--highlight-text-color);
+}
+
+.ok td {
+  background: var(--green-color);
+  color: var(--highlight-text-color);
+}
+
+.similar td {
+  background: var(--yellow-color);
+  color: var(--highlight-text-color);
+}
+
+.symbol {
+  display: inline-block;
+  cursor: help;
+  user-select: none;
+  font-weight: bold;
+  text-align: center;
+  width: 1.5em;
+  margin-left: -0.25rem;
+  margin-right: 0.25rem;
+}
+
+.ng .symbol:before {
+  content: '×';
+}
+
+.ok .symbol:before {
+  content: '〇';
+}
+
+.similar .symbol:before {
+  content: '△';
+}
+
+.none {
+  text-align: center;
+}
+/* #endregion */
+
+/* #region Highlight animation */
+:has(> button) {
+  position: relative;
+  z-index: 0;
+}
+
+button {
+  z-index: -2;
+}
+
+button:enabled:hover {
+  outline: calc(var(--scale) * 4px) solid light-dark(white, black);
+  z-index: auto;
+}
+
+button:enabled:hover::before {
+  content: '';
+  display: block;
+  --outline-width: 10px;
+  position: absolute;
+  left: calc(var(--scale) * -1 * var(--outline-width));
+  top: calc(var(--scale) * -1 * var(--outline-width));
+  z-index: -1;
+  height: calc(100% + var(--scale) * 20px);
+  width: calc(100% + var(--scale) * 20px);
+  animation: 4s linear infinite rotation;
+  background: var(--highlight-bg-color);
+  background: repeating-conic-gradient(
+    in oklab,
+    light-dark(#FFE4E4, #FFC4C0) calc(  0deg + var(--rotation1) - var(--angle1) / 2),
+    light-dark(#FFE4E4, #FFC4C0) calc(  0deg + var(--rotation1) + var(--angle1) / 2),
+    light-dark(#0D77FF, #0B68E9) calc(  0deg + var(--rotation2) - var(--angle2) / 2),
+    light-dark(#0D77FF, #0B68E9) calc(  0deg + var(--rotation2) + var(--angle2) / 2),
+    light-dark(#DFFFFF, #C0FBFF) calc(180deg + var(--rotation1) - var(--angle1) / 2),
+    light-dark(#DFFFFF, #C0FBFF) calc(180deg + var(--rotation1) + var(--angle1) / 2),
+    light-dark(#7969FF, #847DFF) calc(180deg + var(--rotation2) - var(--angle2) / 2),
+    light-dark(#7969FF, #847DFF) calc(180deg + var(--rotation2) + var(--angle2) / 2),
+    light-dark(#FFE4E4, #FFC4C0) calc(360deg + var(--rotation1) - var(--angle1) / 2)
+  );
+  border-radius: calc(var(--scale) * 12px);
+}
+
+@property --rotation1 {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: true;
+}
+
+@property --rotation2 {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --angle1 {
+  syntax: '<angle>';
+  initial-value: 45deg;
+  inherits: true;
+}
+
+@property --angle2 {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: true;
+}
+
+@keyframes rotation {
+  0%   { --rotation1:   0deg; --rotation2:  90deg; --angle1: 60deg; --angle2:  0deg; }
+  25%  { --rotation1:  90deg; --rotation2: 180deg; --angle1:  0deg; --angle2: 60deg; }
+  50%  { --rotation1: 180deg; --rotation2: 270deg; --angle1: 60deg; --angle2:  0deg; }
+  75%  { --rotation1: 270deg; --rotation2: 360deg; --angle1:  0deg; --angle2: 60deg; }
+  100% { --rotation1: 360deg; --rotation2: 450deg; --angle1: 60deg; --angle2:  0deg; }
+}
+/* #endregion */

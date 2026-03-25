@@ -142,7 +142,7 @@ def dump_to_json(words: dict[str, set[Entry]]):
         for language, version in sorted(words[word], key=lambda x: (get_args(Language).index(x[0]), x[1])):
             result.setdefault(language, []).append(version)
         output[word] = result
-    with open('output/badwords.json', 'w', encoding='utf-8') as f:
+    with open('web/public/rules_block.json', 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, separators=(',', ':'))
 
 def dump_to_wiki_table(words: dict[str, set[Entry]]):

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#414143" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E0E16" />
+  <meta name="description" content="Tool to simulate Nintendo console profanity filters" />
+  <link rel="apple-touch-icon" href="logo192.png" />
+  <link rel="manifest" href="manifest.json" />
+  <title>Profanity Filter Simulator</title>
+  <link rel="canonical" href="https://abcboy101.github.io/badword/">
+  <link rel="canonical" href="https://abcboy101.github.io/badword/?lng=en" hreflang="en">
+  <link rel="alternate" href="https://abcboy101.github.io/badword/?lng=ja" hreflang="ja">
+  <script type="module" src="/src/main.ts"></script>
+  <link rel='stylesheet' href='/src/style.css'>
+</head>
+<body id="page-container" class="mode-system" lang="en">
+  <header>
+    <h1><span id="title">Profanity Filter Simulator</span><br><small id="subtitle">for Nintendo Switch/<wbr>3DS/<wbr>Wii&nbsp;U</small></h1>
+    <form class="options-container" onSubmit="return false">
+      <label for="colorscheme">Theme</label>
+      <select id="colorscheme" name="colorscheme">
+        <option value="system">System</option>
+        <option value="light">Basic Light</option>
+        <option value="dark">Basic Dark</option>
+      </select>
+
+      <label for="version">Version</label>
+      <select id="version" name="version">
+        <option value="">All</option>
+        <optgroup label="Switch/Switch 2">
+          <option value="66">NSW 22.0.0</option>
+          <option value="65">NSW 21.0.0</option>
+          <option value="64">NSW 20.1.0</option>
+          <option value="63">NSW 20.0.0</option>
+          <option value="62">NSW 19.0.1 (43)</option>
+          <option value="60">NSW 19.0.1</option>
+          <option value="59">NSW 19.0.0</option>
+          <option value="57">NSW 18.1.0 (40)</option>
+          <option value="55">NSW 18.1.0</option>
+          <option value="54">NSW 18.0.0</option>
+          <option value="53">NSW 17.0.1 (37)</option>
+          <option value="52">NSW 17.0.0 (36)</option>
+          <option value="51">NSW 17.0.0</option>
+          <option value="50">NSW 16.1.0</option>
+          <option value="49">NSW 16.0.3 (33)</option>
+          <option value="48">NSW 16.0.3 (32)</option>
+          <option value="47">NSW 16.0.2</option>
+          <option value="46">NSW 16.0.1</option>
+          <option value="45">NSW 16.0.0</option>
+          <option value="44">NSW 15.0.1 (28)</option>
+          <option value="43">NSW 15.0.1</option>
+          <option value="42">NSW 14.1.2 (25)</option>
+          <option value="41">NSW 14.1.2 (24)</option>
+          <option value="40">NSW 14.1.2 (23)</option>
+          <option value="39">NSW 14.1.2</option>
+          <option value="38">NSW 14.1.1</option>
+          <option value="37">NSW 13.0.0</option>
+          <option value="35">NSW 12.0.3</option>
+          <option value="34">NSW 12.0.1</option>
+          <option value="33">NSW 11.0.1 (13)</option>
+          <option value="32">NSW 11.0.0</option>
+          <option value="31">NSW 10.2.0</option>
+          <option value="30">NSW 10.0.0</option>
+          <option value="29">NSW 9.0.0</option>
+          <option value="28">NSW 8.0.0</option>
+          <option value="27">NSW 7.0.0</option>
+          <option value="26">NSW 6.0.0</option>
+          <option value="25">NSW 5.0.0</option>
+          <option value="24">NSW 4.0.0</option>
+          <option value="23">NSW 3.0.2</option>
+          <option value="21">NSW 3.0.0</option>
+          <option value="20">NSW 2.0.0</option>
+          <option value="19">NSW 1.0.0</option>
+        </optgroup>
+        <optgroup label="3DS/Wii U">
+          <option value="18">3DS 11.1.0-34</option>
+          <option value="17">3DS 9.6.0-24</option>
+          <option value="17">Wii U 5.5.0</option>
+          <option value="16">3DS 9.3.0-21</option>
+          <option value="16">Wii U 5.3.0</option>
+          <option value="14">3DS 9.0.0-20</option>
+          <option value="13">3DS 5.0.0-11</option>
+          <option value="13">Wii U 3.0.0</option>
+          <option value="12">3DS 4.3.0-10</option>
+          <option value="12">Wii U 1.0.1</option>
+          <option value="11">3DS 4.0.0-7</option>
+          <option value="10">3DS 3.0.0-5</option>
+          <option value="5">3DS 2.0.0-2</option>
+          <option value="4">3DS 1.0.0-0</option>
+        </optgroup>
+      </select>
+    </form>
+  </header>
+
+  <main>
+    <form id="textbox-single-container" class="textbox-container" style="display: none;" onSubmit="return false">
+      <label id="textbox-single-label" for="textbox-single">Enter your text</label>
+      <input id="textbox-single" type="text" maxlength="1000" autofocus></input>
+      <span id="textbox-single-character-count" class="character-count">0/1000</span>
+    </form>
+    <form id="textbox-multiple-container" class="textbox-container" onSubmit="return false">
+      <div class="textbox-multiple-outer">
+        <textarea id="textbox-multiple" maxlength="1000" placeholder="Enter your text" autofocus></textarea>
+      </div>
+      <span id="textbox-multiple-character-count" class="character-count">0/1000</span>
+    </form>
+    <div id="result-container" class="result-container">
+      <div id="status" class="status">Loading...</div>
+      <div id="languages" class="languages">
+        <button id="language-jja" class="language"><span class="region-code">J</span><span class="language-code">JA</span></button>
+        <button id="language-pen" class="language"><span class="region-code">P</span><span class="language-code">EN</span></button>
+        <button id="language-een" class="language"><span class="region-code">E</span><span class="language-code">EN</span></button>
+        <button id="language-pfr" class="language"><span class="region-code">P</span><span class="language-code">FR</span></button>
+        <button id="language-efr" class="language"><span class="region-code">E</span><span class="language-code">FR</span></button>
+        <button id="language-pde" class="language"><span class="region-code">P</span><span class="language-code">DE</span></button>
+        <button id="language-pit" class="language"><span class="region-code">P</span><span class="language-code">IT</span></button>
+        <button id="language-pes" class="language"><span class="region-code">P</span><span class="language-code">ES</span></button>
+        <button id="language-ees" class="language"><span class="region-code">E</span><span class="language-code">ES</span></button>
+        <button id="language-pnl" class="language"><span class="region-code">P</span><span class="language-code">NL</span></button>
+        <button id="language-ppt" class="language"><span class="region-code">P</span><span class="language-code">PT</span></button>
+        <button id="language-ept" class="language"><span class="region-code">E</span><span class="language-code">PT</span></button>
+        <button id="language-pru" class="language"><span class="region-code">P</span><span class="language-code">RU</span></button>
+        <button id="language-kko" class="language"><span class="region-code">K</span><span class="language-code">KO</span></button>
+        <button id="language-czh" class="language"><span class="region-code">C</span><span class="language-code">ZH</span></button>
+        <button id="language-tzh" class="language"><span class="region-code">T</span><span class="language-code">ZH</span></button>
+        <button id="language-ten" class="language"><span class="region-code">T</span><span class="language-code">EN</span></button>
+        <button id="language-pol" class="language"><span class="language-code">POL</span></button>
+        <button id="language-tha" class="language"><span class="language-code">THA</span></button>
+        <button id="language-common" class="language"><span class="language-code">Common</span></button>
+      </div>
+      <div class="patterns">
+        <table id="patterns">
+          <thead>
+            <tr>
+              <th>Rule</th>
+              <th>Languages</th>
+              <th>Versions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="none">&mdash;</td>
+              <td class="none">&mdash;</td>
+              <td class="none">&mdash;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span>Created by abcboy | <a id="report-link" href="https://github.com/abcboy101/badword/issues">Report an issue</a> | <a id="contact-link" href="https://bulbapedia.bulbagarden.net/wiki/Special:EmailUser/Abcboy">Contact me</a> | <a href="https://github.com/abcboy101/badword">GitHub</a></span>
+    <div id="lng">EN</div>
+  </footer>
+</body>
+</html>

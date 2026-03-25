@@ -1,5 +1,7 @@
 # badword
-Bad words list for the Nintendo 3DS/Wii U/Switch
+Profanity filter lists for the Nintendo Switch/3DS/Wii U
+
+Try the simulator at [abcboy101.github.io/badword/](https://abcboy101.github.io/badword/)
 
 - `compile.py` - Generates JSON and wikitext based on all versions of the bad words list.
   This wikitext is used for the table on [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/List_of_censored_words).
