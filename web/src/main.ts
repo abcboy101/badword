@@ -77,7 +77,11 @@ function changeTheme(value: string) {
 
 function changeVersion(value: string) {
   localStorage.setItem('ng-version', value);
-  if (value !== '') {
+  if (value === '') {
+    for (const lang of languageButtons)
+      lang.removeAttribute('disabled');
+  }
+  else {
     const n = Number(value);
     (document.getElementById('language-tzh') as HTMLButtonElement).disabled = (n < 10);
     (document.getElementById('language-ten') as HTMLButtonElement).disabled = (n < 10 || n >= 19);
