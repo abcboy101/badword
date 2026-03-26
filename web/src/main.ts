@@ -70,8 +70,7 @@ worker.onmessage = (e: MessageEvent<WorkerResponse>) => {
 };
 
 function changeTheme(value: string) {
-  document.body.classList.remove('mode-system', 'mode-light', 'mode-dark');
-  document.body.classList.add(`mode-${value}`);
+  document.documentElement.setAttribute('data-mode', value);
   localStorage.setItem('mode', value);
 }
 

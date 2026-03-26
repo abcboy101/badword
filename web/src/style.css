@@ -24,34 +24,24 @@
     oklch(from #0266D8 l c calc(h + 30 + 180)),
     oklch(from #2FB1E3 l c calc(h + 45 + 180))
   );
+}
 
+html {
   color-scheme: light dark;
   caret-color: light-dark(#49B0FF, #2A6897);
+}
+
+html[data-mode="light"] {
+  color-scheme: light;
+}
+
+html[data-mode="dark"] {
+  color-scheme: dark;
 }
 
 ::selection {
   background-color: #8EA4A2DB;
   caret-color: light-dark(#47A7F3, #49B0FF);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color-scheme: light;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
-}
-
-.mode-light {
-  color-scheme: light;
-}
-
-.mode-dark {
-  color-scheme: dark;
 }
 /* #endregion */
 
