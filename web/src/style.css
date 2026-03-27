@@ -460,14 +460,9 @@ button {
   z-index: -2;
 }
 
-button:enabled:hover {
-  outline: calc(var(--scale) * 4px) solid light-dark(white, black);
-  z-index: auto;
-}
-
-button:enabled:hover::before {
+button::before {
   content: '';
-  display: block;
+  display: none;
   --outline-width: 10px;
   position: absolute;
   left: calc(var(--scale) * -1 * var(--outline-width));
@@ -490,6 +485,30 @@ button:enabled:hover::before {
     light-dark(#FFE4E4, #FFC4C0) calc(360deg + var(--rotation1) - var(--angle1) / 2)
   );
   border-radius: calc(var(--scale) * 12px);
+}
+
+button.active:enabled:hover,
+button:enabled:active,
+button:enabled:focus-visible {
+  outline: calc(var(--scale) * 4px) solid light-dark(white, black);
+  z-index: auto;
+}
+
+button.active:enabled:hover::before,
+button:enabled:active::before,
+button:enabled:focus-visible::before {
+  display: block;
+}
+
+@media (hover: hover) {
+  button:enabled:hover {
+    outline: calc(var(--scale) * 4px) solid light-dark(white, black);
+    z-index: auto;
+  }
+
+  button:enabled:hover::before {
+    display: block;
+  }
 }
 
 @property --rotation1 {

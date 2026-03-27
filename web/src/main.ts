@@ -121,7 +121,11 @@ function showLang(e: Event) {
         other.classList.remove('active');
       else
         lang.classList.toggle('active');
-  updateStatusLang(lang);
+
+  if (window.matchMedia("(hover: hover)").matches)
+    updateStatusLang(lang);
+  else
+    updateStatus();
 }
 
 languageButtons.forEach((lang) => {
