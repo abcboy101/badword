@@ -15,6 +15,7 @@ const resources = {
     "status_ng": "This text contains inappropriate language.",
     "status_ok_lang": "No inappropriate language was detected in $1.",
     "status_ng_lang": "This text contains inappropriate language in $1.",
+    "status_disabled": "This version does not support $1.",
     "region_j": "[JPN] Japan",
     "region_e": "[USA] The Americas",
     "region_p": "[EUR] Europe",
@@ -63,6 +64,7 @@ const resources = {
     "status_ng": "使えない言葉が含まれています。",
     "status_ok_lang": "$1では使えない言葉が含まれていません。",
     "status_ng_lang": "$1では使えない言葉が含まれています。",
+    "status_disabled": "このバージョンでは$1に対応していません。",
     "region_j": "[JPN] 日本",
     "region_e": "[USA] アメリカ大陸",
     "region_p": "[EUR] ヨーロッパ",
@@ -103,10 +105,9 @@ const i18n: Readonly<Record<Language, Record<Key, string>>> = resources;
 
 let currentLang: Language = 'en';
 export function localize(lang: Language) {
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters, @typescript-eslint/non-nullable-type-assertion-style
-  const select = <T extends HTMLElement>(selector: string) => document.querySelector(selector) as T;
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
-  const selectAll = <T extends HTMLElement>(selector: string) => document.querySelectorAll(selector) as NodeListOf<T>;
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters
+  const select = <T extends HTMLElement>(selector: string) => document.querySelector<T>(selector)!;
+  const selectAll = <T extends HTMLElement>(selector: string) => document.querySelectorAll<T>(selector);
 
   const dict = i18n[currentLang = lang];
   document.body.lang = currentLang;

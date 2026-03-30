@@ -11,7 +11,7 @@ const versionSelect = document.getElementById('version') as HTMLSelectElement;
 const textNormal = (document.getElementById('textbox-multiple') ?? document.getElementById('textbox-single')) as HTMLTextAreaElement | HTMLInputElement;
 const characterCount = document.getElementById('textbox-multiple-character-count') ?? document.getElementById('textbox-single-character-count') as HTMLSpanElement;
 const languageButtons = Array.from(document.getElementsByClassName('language')) as HTMLButtonElement[];
-const status = document.getElementById('status')!;
+const status = document.getElementById('status-text')!;
 
 let loading = false;
 let ngLangs = new Set<string>();
@@ -22,7 +22,7 @@ if (!CSS.supports('width', 'calc(1% / 1px * 1px)')) {
   const commonText = document.querySelector("#language-common .language-code")!;
   const calculateLanguagesGrid = () => {
     document.getElementById('languages')!.style.setProperty('--fit-column-count',
-      Math.ceil(status.clientWidth / commonText.clientWidth).toString());
+      Math.ceil(document.getElementById('status')!.clientWidth / commonText.clientWidth).toString());
   }
   calculateLanguagesGrid();
   window.addEventListener('resize', calculateLanguagesGrid);
@@ -87,40 +87,41 @@ function changeVersion(value: string) {
     (document.getElementById('language-pol') as HTMLButtonElement).disabled = (n < 65);
     (document.getElementById('language-tha') as HTMLButtonElement).disabled = (n < 65);
     (document.getElementById('language-common') as HTMLButtonElement).disabled = (n < 19);
+
+    for (const lang of languageButtons)
+      if (lang.disabled)
+        lang.classList.remove('active');
   }
-  if (textNormal.value)
-    setText(textNormal.value);
+  updateStatus();
+  setText(textNormal.value);
 }
 
 function updateStatusLang(lang: HTMLButtonElement): string {
-  if (loading)
-    return status.innerText = getLocalizedString('status_loading');
   const langCode = lang.id.split('-')[1];
   const langName = lang.getAttribute('data-name') ?? lang.title;
-  return status.innerText = getLocalizedString(!ngLangs.has(langCode) ? 'status_ok_lang' : 'status_ng_lang').replaceAll('$1', langName);
+  const message = `status_${loading ? 'loading' : (lang.disabled ? 'disabled' : `${!ngLangs.has(langCode) ? 'ok' : 'ng'}_lang` as const)}` as const;
+  return status.innerHTML = getLocalizedString(message).replaceAll('$1', `<span class="language-name">${langName}</span>`);
 }
 
 export function updateStatus(): string {
   if (loading)
     return status.innerText = getLocalizedString('status_loading');
+  const supportsHover = window.matchMedia("(hover: hover)").matches;
   for (const lang of languageButtons)
-    if (lang.classList.contains('active'))
+    if (lang.classList.contains('active') || (supportsHover && lang.matches(':hover')))
       return updateStatusLang(lang);
   return status.innerText = getLocalizedString(ngLangs.size === 0 ? 'status_ok' : 'status_ng');
 }
 
 function showLang(e: Event) {
   const lang = e.currentTarget as HTMLButtonElement;
-  if (!lang.id.startsWith('language-') || lang.disabled)
-    return;
-
   e.preventDefault();
-  if (e.type === 'click')
+  if (e.type === 'click') {
+    lang.classList.toggle('active');
     for (const other of languageButtons)
       if (other !== lang)
         other.classList.remove('active');
-      else
-        lang.classList.toggle('active');
+  }
 
   if (window.matchMedia("(hover: hover)").matches)
     updateStatusLang(lang);

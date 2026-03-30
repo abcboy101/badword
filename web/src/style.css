@@ -95,6 +95,7 @@ input[type=text], select, input[type=submit], input[type=button], button, textar
 }
 
 input[type=submit], input[type=button], button {
+  -webkit-user-select: none;
   user-select: none;
   border: none;
 }
@@ -146,6 +147,7 @@ footer {
 
 #lng {
   position: absolute;
+  -webkit-user-select: none;
   user-select: none;
   cursor: default;
   font-size: 75%;
@@ -272,6 +274,10 @@ textarea {
   margin-right: var(--main-padding);
 }
 
+.status .language-name {
+  color: var(--active-text-color);
+}
+
 .languages {
   --item-count: 20;
   --language-gap: 6px;
@@ -291,7 +297,7 @@ textarea {
   --language-width: calc((var(--grid-width) - (var(--language-gap) * (var(--column-count) - 1))) / var(--column-count));
 
   display: grid;
-  grid-template-columns: repeat(var(--column-count), 1fr);
+  grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
   gap: calc(var(--scale) * var(--language-gap));
   justify-self: center;
   align-content: center;
@@ -324,11 +330,6 @@ textarea {
 
 .language.active {
   --language-text-color: var(--active-text-color-invert);
-}
-
-.language:active {
-  --language-text-color: var(--highlight-text-color);
-  --language-bg-color: var(--highlight-bg-color);
 }
 
 .region-code {
@@ -394,7 +395,19 @@ textarea {
 }
 
 .pattern {
+  position: relative;
   white-space: nowrap;
+}
+
+.pattern:has(.symbol:hover)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(58 154 255 / 0.14);
+  pointer-events: none;
 }
 
 .overridden .symbol,
@@ -431,6 +444,7 @@ s, .overridden .text {
   width: 1.5em;
   margin-left: -0.25rem;
   margin-right: 0.25rem;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .ng .symbol:before {
@@ -474,39 +488,40 @@ button::before {
   background: var(--highlight-bg-color);
   background: repeating-conic-gradient(
     in oklab,
-    light-dark(#FFE4E4, #FFC4C0) calc(  0deg + var(--rotation1) - var(--angle1) / 2),
-    light-dark(#FFE4E4, #FFC4C0) calc(  0deg + var(--rotation1) + var(--angle1) / 2),
-    light-dark(#0D77FF, #0B68E9) calc(  0deg + var(--rotation2) - var(--angle2) / 2),
-    light-dark(#0D77FF, #0B68E9) calc(  0deg + var(--rotation2) + var(--angle2) / 2),
-    light-dark(#DFFFFF, #C0FBFF) calc(180deg + var(--rotation1) - var(--angle1) / 2),
-    light-dark(#DFFFFF, #C0FBFF) calc(180deg + var(--rotation1) + var(--angle1) / 2),
-    light-dark(#7969FF, #847DFF) calc(180deg + var(--rotation2) - var(--angle2) / 2),
-    light-dark(#7969FF, #847DFF) calc(180deg + var(--rotation2) + var(--angle2) / 2),
-    light-dark(#FFE4E4, #FFC4C0) calc(360deg + var(--rotation1) - var(--angle1) / 2)
+    #FFD4ED calc(  0deg + var(--rotation1) - var(--angle1) / 2),
+    #FFD4ED calc(  0deg + var(--rotation1) + var(--angle1) / 2),
+    #0C78FF calc(  0deg + var(--rotation2) - var(--angle2) / 2),
+    #0C78FF calc(  0deg + var(--rotation2) + var(--angle2) / 2),
+    #C5FBFF calc(180deg + var(--rotation1) - var(--angle1) / 2),
+    #C5FBFF calc(180deg + var(--rotation1) + var(--angle1) / 2),
+    #9578FF calc(180deg + var(--rotation2) - var(--angle2) / 2),
+    #9578FF calc(180deg + var(--rotation2) + var(--angle2) / 2),
+    #FFD4ED calc(360deg + var(--rotation1) - var(--angle1) / 2)
   );
   border-radius: calc(var(--scale) * 12px);
+  pointer-events: none;
 }
 
-button.active:enabled:hover,
-button:enabled:active,
-button:enabled:focus-visible {
+button.active:hover,
+button:active,
+button:focus-visible {
   outline: calc(var(--scale) * 4px) solid light-dark(white, black);
   z-index: auto;
 }
 
-button.active:enabled:hover::before,
-button:enabled:active::before,
-button:enabled:focus-visible::before {
+button.active:hover::before,
+button:active::before,
+button:focus-visible::before {
   display: block;
 }
 
 @media (hover: hover) {
-  button:enabled:hover {
+  button:hover {
     outline: calc(var(--scale) * 4px) solid light-dark(white, black);
     z-index: auto;
   }
 
-  button:enabled:hover::before {
+  button:hover::before {
     display: block;
   }
 }
@@ -541,5 +556,26 @@ button:enabled:focus-visible::before {
   50%  { --rotation1: 180deg; --rotation2: 270deg; --angle1: 60deg; --angle2:  0deg; }
   75%  { --rotation1: 270deg; --rotation2: 360deg; --angle1:  0deg; --angle2: 60deg; }
   100% { --rotation1: 360deg; --rotation2: 450deg; --angle1: 60deg; --angle2:  0deg; }
+}
+
+button {
+  -webkit-tap-highlight-color: rgb(58 154 255 / 0.5);
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #3A9AFF;
+  border-radius: calc(var(--scale) * 2px);
+  opacity: 0;
+  transition: opacity 100ms linear;
+  pointer-events: none;
+}
+
+button:enabled:active::after {
+  opacity: 0.14;
+  transition: none;
 }
 /* #endregion */
