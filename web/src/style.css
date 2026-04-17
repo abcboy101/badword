@@ -12,18 +12,26 @@
   --active-text-color: light-dark(#0266D8, #20CBFF);
   --active-text-color-invert: light-dark(#20CBFF, #0266D8);
 
-  --red-color: light-dark(
-    oklch(from #0266D8 l c calc(h + 30 + 120)),
-    oklch(from #2FB1E3 l c calc(h + 45 + 120))
-  );
-  --green-color: light-dark(
-    oklch(from #0266D8 l c calc(h + 30 - 120)),
-    oklch(from #2FB1E3 l c calc(h + 45 - 120))
-  );
-  --yellow-color: light-dark(
-    oklch(from #0266D8 l c calc(h + 30 + 180)),
-    oklch(from #2FB1E3 l c calc(h + 45 + 180))
-  );
+  --red-color: light-dark(#BE3700, #E7836B);
+  --green-color: light-dark(#008C55, #58BA7E);
+  --yellow-color: light-dark(#7A7000, #BDA132);
+}
+
+@supports (color: oklch(from #0266D8 l c calc(h + 30 + 120))) {
+  :root {
+    --red-color: light-dark(
+      oklch(from #0266D8 l c calc(h + 30 + 120)),
+      oklch(from #2FB1E3 l c calc(h + 45 + 120))
+    );
+    --green-color: light-dark(
+      oklch(from #0266D8 l c calc(h + 30 - 120)),
+      oklch(from #2FB1E3 l c calc(h + 45 - 120))
+    );
+    --yellow-color: light-dark(
+      oklch(from #0266D8 l c calc(h + 30 + 180)),
+      oklch(from #2FB1E3 l c calc(h + 45 + 180))
+    );
+  }
 }
 
 html {
@@ -57,7 +65,7 @@ html[data-mode="dark"] {
 body {
   display: grid;
   grid-template-rows: repeat(2, auto) minmax(0, 1fr);
-  min-height: 100dvh;
+  min-height: 100vh;
   max-width: calc(var(--scale) * 1920px);
   margin: 0 auto;
   background: var(--body-bg-color);
@@ -70,6 +78,12 @@ body {
     sans-serif;
   font-size: calc(var(--scale) * 32pt);
   line-height: 1.5;
+}
+
+@supports (min-height: 100dvh) {
+  body {
+    min-height: 100dvh;
+  }
 }
 
 a {
@@ -359,6 +373,12 @@ textarea {
   scale: calc(var(--min-scale) + (var(--max-scale) - var(--min-scale)) * var(--parity));
 }
 
+@supports not (scale: 0.75) {
+  #language-common .language-code {
+    font-size: calc((var(--min-scale) + (var(--max-scale) - var(--min-scale)) * var(--parity)) * 100%);
+  }
+}
+
 .language-ok {
   --language-bg-color: var(--green-color);
   --language-text-color: var(--highlight-text-color);
@@ -465,6 +485,7 @@ s, .overridden .text {
 /* #endregion */
 
 /* #region Highlight animation */
+#languages,
 :has(> button) {
   position: relative;
   z-index: 0;
@@ -486,20 +507,53 @@ button::before {
   width: calc(100% + var(--scale) * 20px);
   animation: 4s linear infinite rotation;
   background: var(--highlight-bg-color);
-  background: repeating-conic-gradient(
-    in oklab,
-    #FFD4ED calc(  0deg + var(--rotation1) - var(--angle1) / 2),
-    #FFD4ED calc(  0deg + var(--rotation1) + var(--angle1) / 2),
-    #0C78FF calc(  0deg + var(--rotation2) - var(--angle2) / 2),
-    #0C78FF calc(  0deg + var(--rotation2) + var(--angle2) / 2),
-    #C5FBFF calc(180deg + var(--rotation1) - var(--angle1) / 2),
-    #C5FBFF calc(180deg + var(--rotation1) + var(--angle1) / 2),
-    #9578FF calc(180deg + var(--rotation2) - var(--angle2) / 2),
-    #9578FF calc(180deg + var(--rotation2) + var(--angle2) / 2),
-    #FFD4ED calc(360deg + var(--rotation1) - var(--angle1) / 2)
-  );
   border-radius: calc(var(--scale) * 12px);
   pointer-events: none;
+}
+
+@supports (background: repeating-conic-gradient(#FFD4ED, #0C78FF, #C5FBFF, #9578FF)) {
+  button::before {
+    background: repeating-conic-gradient(
+      #FFD4ED 0deg,
+      #0C78FF 90deg,
+      #C5FBFF 180deg,
+      #9578FF 270deg,
+      #FFD4ED 360deg
+    );
+  }
+}
+
+@supports (background: repeating-conic-gradient(#FFD4ED, #0C78FF, #C5FBFF, #9578FF)) and (initial-value: 0deg) {
+  button::before {
+    background: repeating-conic-gradient(
+      #FFD4ED calc(  0deg + var(--rotation1) - var(--angle1) / 2),
+      #FFD4ED calc(  0deg + var(--rotation1) + var(--angle1) / 2),
+      #0C78FF calc(  0deg + var(--rotation2) - var(--angle2) / 2),
+      #0C78FF calc(  0deg + var(--rotation2) + var(--angle2) / 2),
+      #C5FBFF calc(180deg + var(--rotation1) - var(--angle1) / 2),
+      #C5FBFF calc(180deg + var(--rotation1) + var(--angle1) / 2),
+      #9578FF calc(180deg + var(--rotation2) - var(--angle2) / 2),
+      #9578FF calc(180deg + var(--rotation2) + var(--angle2) / 2),
+      #FFD4ED calc(360deg + var(--rotation1) - var(--angle1) / 2)
+    );
+  }
+}
+
+@supports (background: repeating-conic-gradient(in oklab, #FFD4ED, #0C78FF, #C5FBFF, #9578FF)) and (initial-value: 0deg) {
+  button::before {
+    background: repeating-conic-gradient(
+      in oklab,
+      #FFD4ED calc(  0deg + var(--rotation1) - var(--angle1) / 2),
+      #FFD4ED calc(  0deg + var(--rotation1) + var(--angle1) / 2),
+      #0C78FF calc(  0deg + var(--rotation2) - var(--angle2) / 2),
+      #0C78FF calc(  0deg + var(--rotation2) + var(--angle2) / 2),
+      #C5FBFF calc(180deg + var(--rotation1) - var(--angle1) / 2),
+      #C5FBFF calc(180deg + var(--rotation1) + var(--angle1) / 2),
+      #9578FF calc(180deg + var(--rotation2) - var(--angle2) / 2),
+      #9578FF calc(180deg + var(--rotation2) + var(--angle2) / 2),
+      #FFD4ED calc(360deg + var(--rotation1) - var(--angle1) / 2)
+    );
+  }
 }
 
 button.active:hover,

@@ -17,12 +17,20 @@ let loading = false;
 let ngLangs = new Set<string>();
 const entriesDefault = document.querySelector('#patterns tbody')!.innerHTML;
 
-// Fallback if division with units is not supported
-if (!CSS.supports('width', 'calc(1% / 1px * 1px)')) {
+// Fallback if division with units or rounding is not supported
+if (!CSS.supports('width', 'calc(1% / 1px * 1px)') || !CSS.supports('z-index', 'round(up, 1.5)')) {
   const commonText = document.querySelector("#language-common .language-code")!;
+  const element = document.getElementById('languages')!;
   const calculateLanguagesGrid = () => {
-    document.getElementById('languages')!.style.setProperty('--fit-column-count',
-      Math.ceil(document.getElementById('status')!.clientWidth / commonText.clientWidth).toString());
+    const itemCount = Number(getComputedStyle(element).getPropertyValue('--item-count'));
+    const fitColumnCount = Math.ceil(document.getElementById('status')!.clientWidth / commonText.clientWidth);
+    const rowCount = Math.ceil(itemCount / fitColumnCount);
+    const columnCount = Math.ceil(itemCount / rowCount);
+    const parity = (rowCount * columnCount) % 2;
+    element.style.setProperty('--fit-column-count', fitColumnCount.toString());
+    element.style.setProperty('--row-count', rowCount.toString());
+    element.style.setProperty('--column-count', columnCount.toString());
+    document.getElementById('language-common')!.style.setProperty('--parity', parity.toString());
   }
   calculateLanguagesGrid();
   window.addEventListener('resize', calculateLanguagesGrid);
