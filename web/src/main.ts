@@ -108,7 +108,7 @@ function updateStatusLang(lang: HTMLButtonElement): string {
   const langCode = lang.id.split('-')[1];
   const langName = lang.getAttribute('data-name') ?? lang.title;
   const message = `status_${loading ? 'loading' : (lang.disabled ? 'disabled' : `${!ngLangs.has(langCode) ? 'ok' : 'ng'}_lang` as const)}` as const;
-  return status.innerHTML = getLocalizedString(message).replaceAll('$1', `<span class="language-name">${langName}</span>`);
+  return status.innerHTML = getLocalizedString(message).replace(/\$1/g, `<span class="language-name">${langName}</span>`);
 }
 
 export function updateStatus(): string {

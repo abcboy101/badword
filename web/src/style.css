@@ -523,7 +523,7 @@ button::before {
   }
 }
 
-@supports (background: repeating-conic-gradient(#FFD4ED, #0C78FF, #C5FBFF, #9578FF)) and (initial-value: 0deg) {
+@supports (background: repeating-conic-gradient(#FFD4ED, #0C78FF, #C5FBFF, #9578FF)) and (transform: rotate(var(--rotation1))) {
   button::before {
     background: repeating-conic-gradient(
       #FFD4ED calc(  0deg + var(--rotation1) - var(--angle1) / 2),
@@ -539,7 +539,7 @@ button::before {
   }
 }
 
-@supports (background: repeating-conic-gradient(in oklab, #FFD4ED, #0C78FF, #C5FBFF, #9578FF)) and (initial-value: 0deg) {
+@supports (background: repeating-conic-gradient(in oklab, #FFD4ED, #0C78FF, #C5FBFF, #9578FF)) and (transform: rotate(var(--rotation1))) {
   button::before {
     background: repeating-conic-gradient(
       in oklab,
@@ -605,11 +605,11 @@ button:focus-visible::before {
 }
 
 @keyframes rotation {
-  0%   { --rotation1:   0deg; --rotation2:  90deg; --angle1: 60deg; --angle2:  0deg; }
-  25%  { --rotation1:  90deg; --rotation2: 180deg; --angle1:  0deg; --angle2: 60deg; }
-  50%  { --rotation1: 180deg; --rotation2: 270deg; --angle1: 60deg; --angle2:  0deg; }
-  75%  { --rotation1: 270deg; --rotation2: 360deg; --angle1:  0deg; --angle2: 60deg; }
-  100% { --rotation1: 360deg; --rotation2: 450deg; --angle1: 60deg; --angle2:  0deg; }
+  0%    { --rotation1:   0deg; --rotation2:  90deg; --angle1: 60deg; --angle2:  0deg; }
+  25%   { --rotation1:  90deg; --rotation2: 180deg; --angle1:  0deg; --angle2: 60deg; }
+  50%   { --rotation1: 180deg; --rotation2: 270deg; --angle1: 60deg; --angle2:  0deg; }
+  75%   { --rotation1: 270deg; --rotation2: 360deg; --angle1:  0deg; --angle2: 60deg; }
+  100%  { --rotation1: 360deg; --rotation2: 450deg; --angle1: 60deg; --angle2:  0deg; }
 }
 
 button {

@@ -28,7 +28,7 @@ let acSimilar: AhoCorasick;
 /** Initializes the worker by downloading the necessary data files and instantiating the Aho-Corasick automata. */
 function initialize() {
   /** Converts a regex to an Aho-Corasick pattern by removing boundaries and unescaping any literal characters to be matched. */
-  const convertRegexToPattern = (pattern: string) => removeWordBoundaries(pattern).replaceAll(/\\(.)/g, '$1');
+  const convertRegexToPattern = (pattern: string) => removeWordBoundaries(pattern).replace(/\\(.)/g, '$1');
 
   /**
    * Checks whether a regex uses features that prevent it from being converted to a single, equivalent Aho-Corasick pattern.
@@ -44,7 +44,7 @@ function initialize() {
         const keywords: string[] = [];
         for (const [keyword, metadata] of Object.entries(await response.json() as RulesObject)) {
           rulesBlock.set(keyword, new Map(Object.entries(metadata)));
-          const max = Math.max(...Object.values(metadata).map((arr) => arr.at(-1)!));
+          const max = Math.max(...Object.values(metadata).map((arr) => arr[arr.length - 1]));
           (max < MIN_AC_VER && isComplexPattern(keyword) ? regexBlock : keywords).push(keyword);
         }
         acBlock = new AhoCorasick(keywords, convertRegexToPattern);
