@@ -30,26 +30,26 @@ class Entry(NamedTuple):
     language: Language
     version: int
 
-def get_languages(version: int = '*'):
+def get_languages(version: int | str = '*'):
     return LANGUAGES_NX if int(version) >= 19 else LANGUAGES_3DS
 
 def detect_language(path: str, version: int | str) -> Language:
     """Returns the language code corresponding to the specified path."""
     filename, extension = os.path.splitext(os.path.basename(path))
-    if filename.startswith('trie'):
-        filename = re.search(r'trie_(.+)_allow', path).group(1)
+    if (match := re.search(r'trie_(.+)_allow', path)) is not None:
+        filename = match.group(1)
     if filename == 'common':
         return 'common'
     return get_languages(version)[int(filename)]
 
-def load_words(version: int | str = '*', languages: Iterable[Language] = None) -> dict[str, set[Entry]]:
+def load_words(version: int | str = '*', languages: Iterable[Language] | None = None) -> dict[str, set[Entry]]:
     """Loads all bad word lists in folders that match the specified glob pattern."""
     words: dict[str, set[Entry]] = dict()
     load_words_regex(words, f'./romfs/NgWord/{version}', languages)
     load_words_ac(words, f'./parsed/NgWord2/{version}', languages)
     return words
 
-def load_words_regex(words: dict[str, set[Entry]], glob_pattern: str, languages: Iterable[Language] = None) -> None:
+def load_words_regex(words: dict[str, set[Entry]], glob_pattern: str, languages: Iterable[Language] | None = None) -> None:
     """Loads all regular expression lists in folders that match the specified glob pattern."""
     for folder in glob.glob(glob_pattern):
         version = int(os.path.basename(folder))
@@ -86,7 +86,7 @@ def convert_ac_to_regex(word: str, path: str) -> str:
     else:
         raise ValueError(f'{path} not recognized')
 
-def load_words_ac(words: dict[str, set[Entry]], glob_pattern: str, languages: Iterable[Language] = None) -> None:
+def load_words_ac(words: dict[str, set[Entry]], glob_pattern: str, languages: Iterable[Language] | None = None) -> None:
     """Loads all Aho-Corasick tries in folders that match the specified glob pattern."""
     for folder in glob.glob(glob_pattern):
         version = int(os.path.basename(folder))
@@ -105,7 +105,7 @@ def load_words_ac(words: dict[str, set[Entry]], glob_pattern: str, languages: It
                 word = convert_ac_to_regex(word, path)
                 words.setdefault(word, set()).add(Entry(language, version))
 
-def add_missing_versions(versions: SortedList[int]):
+def add_missing_versions(versions: SortedList[int]):  # noqa PyTypeHints
     """Adds missing versions that were not publicly released if the prior and following versions are included."""
     if 5 in versions and 10 in versions:
         versions.update([6, 7, 8, 9])
@@ -115,7 +115,7 @@ def add_missing_versions(versions: SortedList[int]):
 
 def make_version_range(versions: Iterable[int], latest: int = -1) -> str:
     """Converts an iterable collection of integers to a comma-separated list of ranges."""
-    versions: SortedList[int] = SortedList(versions)
+    versions: SortedList[int] = SortedList(versions)  # noqa PyTypeHints
     if not versions:
         return ''
     add_missing_versions(versions)

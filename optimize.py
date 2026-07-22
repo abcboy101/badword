@@ -10,7 +10,7 @@ from concurrent.futures.process import ProcessPoolExecutor
 
 from greenery import parse
 
-from compile import load_words, LANGUAGES_NX
+from compile import load_words, LANGUAGES_NX, Language
 
 VERBOSE = True
 
@@ -45,13 +45,13 @@ def check_words_complicated_helper(word: str, other: set[str]) -> str | None:
       (We generate the test strings the first time this step is reached.)
     - If both tests are passed, then we finally use Pattern.equivalent.
       This exhaustively checks that ABC|B is equivalent to B."""
-    test_strings: tuple[str, ...] | None = None
+    test_strings: tuple[str, ...] = ()
     for sub in other:
         if word == sub:
             continue
         if len(set(word).intersection(sub).difference('^$[]()|?.*')) == 0:
             continue
-        if test_strings is None:
+        if not test_strings:
             test_strings = make_test_strings_complicated(word)
         if not all(re.match(sub, test_string) for test_string in test_strings):
             continue
@@ -152,7 +152,7 @@ def check_words_complicated(complicated: set[str]) -> set[str]:
     print(f'Checking {len(complicated)} complicated patterns...')
     redundant = set()
     with multiprocessing.Manager() as manager:  # type: multiprocessing.managers.SyncManager
-        workers = os.cpu_count() - 1
+        workers = (os.cpu_count() or 2) - 1
         with ProcessPoolExecutor(max_workers=workers) as e:
             tasks = manager.Queue()
             for word in sorted(complicated, key=lambda s: len(s)):
@@ -173,7 +173,7 @@ def check_words_complicated(complicated: set[str]) -> set[str]:
                     redundant.add(word)
     return redundant
 
-def main(version: int, filename: str, languages: list[str] = None):
+def main(version: int, filename: str, languages: list[Language] | None = None):
     words = load_words(version, languages)
     print(f'Found {len(words)} patterns')
 
