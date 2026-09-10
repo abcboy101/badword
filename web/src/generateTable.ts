@@ -13,9 +13,10 @@ interface Entry {
 
 /** Adds missing versions that were not publicly released if the prior and following versions are included. */
 function addMissingVersions(versions: Set<number>) {
-  if (versions.has(5) && versions.has(10)) {
-    for (const v of [6, 7, 8, 9])
-      versions.add(v);
+  for (const [lo, hi] of [[5, 10], [66, 70]]) {
+    if (versions.has(lo) && versions.has(hi))
+      for (let v = lo + 1; v < hi; v++)
+        versions.add(v);
   }
   for (const i of [15, 22, 36, 56, 58, 61]) {
     if (versions.has(i - 1) && versions.has(i + 1))

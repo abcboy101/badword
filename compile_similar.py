@@ -9,7 +9,7 @@ from sortedcontainers import SortedList
 
 from compile import Language, detect_language, Entry, load_words as load_badwords, LANGUAGES_NX, make_version_range
 
-def load_words_allow(version: int | str = '*', languages: Iterable[Language] = None) -> dict[str, set[Entry]]:
+def load_words_similar(version: int | str = '*', languages: Iterable[Language] = None) -> dict[str, set[Entry]]:
     """Loads all allowed word lists in folders that match the specified glob pattern."""
     words: dict[str, set[Entry]] = dict()
     load_words_trie(words, f'./parsed/NgWord2/{version}')
@@ -58,6 +58,6 @@ def dump_to_wiki_table(words: dict[str, set[Entry]]):
             f.write(my_str)
 
 if __name__ == '__main__':
-    all_words_allow = load_words_allow()
-    dump_to_json(all_words_allow)
-    dump_to_wiki_table(all_words_allow)
+    all_words_similar = load_words_similar()
+    dump_to_json(all_words_similar)
+    dump_to_wiki_table(all_words_similar)

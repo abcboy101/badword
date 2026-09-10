@@ -107,8 +107,9 @@ def load_words_ac(words: dict[str, set[Entry]], glob_pattern: str, languages: It
 
 def add_missing_versions(versions: SortedList[int]):  # noqa PyTypeHints
     """Adds missing versions that were not publicly released if the prior and following versions are included."""
-    if 5 in versions and 10 in versions:
-        versions.update([6, 7, 8, 9])
+    for lo, hi in [(5, 10), (66, 70)]:
+        if lo in versions and hi in versions:
+            versions.update(range(lo + 1, hi))
     for i in [15, 22, 36, 56, 58, 61]:
         if (i - 1) in versions and (i + 1) in versions:
             versions.add(i)

@@ -15,6 +15,10 @@
 |-
 | <nowiki>5</nowiki> || <nowiki>s</nowiki> || 45+
 |-
+| <nowiki>6</nowiki> || <nowiki>g</nowiki> || 70+
+|-
+| <nowiki>9</nowiki> || <nowiki>g</nowiki> || 70+
+|-
 | <nowiki>vv</nowiki> || <nowiki>w</nowiki> || 45+
 |-
 | <nowiki>|</nowiki> || <nowiki>i</nowiki> || 45+
@@ -33,7 +37,11 @@
 |-
 | <nowiki>ø</nowiki> || <nowiki>o</nowiki> || 45+
 |-
+| <nowiki>ł</nowiki> || <nowiki>l</nowiki> || 70+
+|-
 | <nowiki>ƒ</nowiki> || <nowiki>f</nowiki> || 47+
+|-
+| <nowiki>ǥ</nowiki> || <nowiki>g</nowiki> || 70+
 |-
 | <nowiki>α</nowiki> || <nowiki>a</nowiki> || 45+
 |-
